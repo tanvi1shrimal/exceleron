@@ -1,0 +1,72 @@
+/**
+* jPList - jQuery Data Grid Controls 0.0.70 - http://jplist.com 
+* Copyright 2015 jPList Software.
+*/
+.lato {
+    font-family: 'Lato', sans-serif
+}
+
+.jplist-panel .jplist-pagination {
+    cursor: pointer;
+    float: left;
+    line-height: 30px;
+    margin: 25px auto 0;
+}
+
+.jplist-panel .jplist-pagination button {
+    display: inline-block;
+    color: $ex-gray-moredarker;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px
+}
+
+.jplist-panel .jplist-pagination .jplist-current {
+    font-weight: bold;
+    color: $white;
+    background-color: $ex-pri-blue;
+}
+
+.jplist-panel .jplist-pagination .jplist-pagingprev,
+.jplist-panel .jplist-pagination .jplist-pagingmid,
+.jplist-panel .jplist-pagination .jplist-pagingnext {
+    float: left
+}
+
+.jplist-panel .jplist-pagination .jplist-pagingprev button,
+.jplist-panel .jplist-pagination .jplist-pagingnext button {
+    font-size: 20px;
+    font-family: $pt-sans-r;
+    color: $ex-gray-dark;
+}
+
+.jplist-one-page {
+    display: none
+}
+
+.jplist-empty {
+    display: none
+}
+
+
+.jplist-drop-down-text {
+	font-size: 12px;
+	font-family: $oswald-r;
+	color: $ex-gray-dark;
+	text-transform: uppercase;
+	span {
+		color: $ex-gray-med;
+	}
+}
+.jplist-pagingmid button {
+	border-right: 0;
+	&:last-child {
+		border-right:1px solid $ex-table-gray-lighter;
+	}
+}
+.jplist-panel .jplist-pagination .jplist-pagingprev button {
+    border-right: 0
+}
+.jplist-panel .jplist-pagination .jplist-pagingnext button {
+	border-left:0;
+}

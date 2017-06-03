@@ -1,0 +1,40 @@
+.card-graph {
+	box-shadow: 0 1px 15px rgba(0, 0, 0, 0.21);
+}
+
+// 
+
+.card-graph-open {
+
+	.card-header {
+		position: relative;
+		padding: 0 0px 20px 0px;
+		display: table;
+    	width: 100%;
+		z-index: 0;
+		margin-bottom: 20px;
+
+		.card-title {
+			display: table-cell;
+    		vertical-align: middle;
+		}
+
+		.panel-pager {
+			display: table-cell;
+		    vertical-align: middle;
+		    float: right;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -20px;
+			right: -20px;
+			bottom: 0px;
+			left: -20px;
+			
+			background-color: #f8f8f8;
+			z-index: -1;
+		}
+	}
+}

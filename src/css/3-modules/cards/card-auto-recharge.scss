@@ -1,0 +1,52 @@
+.card-auto-recharge {
+	.card-heading {
+
+	}
+
+	.card-body {
+		margin-bottom: 0px;
+	}
+
+	.card-footer {
+		justify-content: space-between;
+	}
+
+	.charges-block {
+		// justify-content: flex-start;
+		// align-items: flex-start;
+	}
+
+	.auto-recharge-box {
+		position: relative;
+		top: -20px;
+		margin-left: 30px;		
+	}
+}
+
+
+.auto-recharge-box {
+	padding: 15px 20px;
+	background: #f4f6f8;
+	display:inline-block;
+
+	&__label {
+		font-family: "Oswald-Regular", sans-serif;
+		font-size: 12px;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+		color:$ex-gray-med;
+	}
+
+	&__value {
+		font-family: "Oswald-Bold", sans-serif;
+		font-size: 25px;
+		display: inline-block;
+	}
+	.label-currency{
+		font-family:$oswald-l;
+		color:$ex-gray-med;
+		font-size: 25px;
+		display: inline-block;
+		padding-right:5px;
+	}
+}

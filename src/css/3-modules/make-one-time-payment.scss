@@ -1,0 +1,131 @@
+
+.make-payment {
+	&__header {
+		padding:25px 25px 125px 25px;
+		background:$ex-gray-lighter;
+		border-bottom:none;
+		.service-type__title {
+			margin-top:28px;
+		}
+	}
+
+	&__body{
+		padding:0px 28px 15px 28px;
+		margin-top:-45px;
+	}
+
+	&__footer {
+		// display: flex;
+		// align-items:center;
+		// justify-content: space-between;
+		display: table;
+
+		.btn-check.no-padd{
+			display: table-cell;
+    		vertical-align: middle;
+		}
+
+		.btn--blue{
+			display: table-cell;
+		}
+		label{
+			margin-bottom: 0;
+		}
+		.btn-check input[type="checkbox"]+.label-text:before, 
+		.btn-check input[type="radio"]+.label-text:before {
+			    transform: translateY(50%);
+			    left: 0;
+			    text-align: left;
+			    float: left;
+		}
+	}
+}
+
+.make-payment__footer.filter-checkbox {
+	padding:0;
+	.label-text {
+		@include font($pt-sans-b, $size: 14px, $line-height: 24px);
+		color:$ex-gray-darker;
+		display: inline-block;
+		opacity: 1;
+		text-align:left;
+		display:flex;
+	}
+}
+
+.make-payment__footer.filter-checkbox input[type="checkbox"]+.label-text:before {
+	width:25px;
+}
+
+.payment-form {
+	
+	.form-group  {
+		margin-bottom:20px;
+	
+		 .form-input{
+			width:100%;
+		}
+		.btn-group{
+			width: 100% !important;
+		}
+		&:nth-of-type(odd){
+			.form-input{
+				margin-right: 0; //5px
+			}
+		}
+		&:nth-of-type(even){
+			.form-input{
+				margin-left: 0;  //5px
+			}
+		}
+	}
+
+}
+
+.make-payment__footer1 {
+	justify-content:flex-end;
+}
+
+.label-text--inner {
+	@include font($pt-sans-r, $size: 12px, $line-height: 22px);
+	color:$ex-gray-med;
+	text-transform:lowercase;
+	display:inline-block;
+}
+
+.label-text-wraper  {
+	margin-left:10px;
+	text-align:left;
+}
+
+.payment-form, .card-detail {
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+	  -webkit-appearance: none; 
+	  margin: 0; 
+	}
+}
+//card details section
+
+.card-detail {
+	margin: 0 52px;
+	padding:35px;
+	border-radius:10px;
+	background:#f4b458;
+	
+	transform:translateY(-22%);
+	.form-group label {
+		color:$ex-gray-dark;
+	}
+
+}
+
+.form-input--card-type {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.form-group.no-mar {
+	margin-bottom:0;
+}

@@ -1,0 +1,441 @@
+
+
+.edit-balance-detail{
+
+	.subscription-panel--usage{
+		position:relative;
+		&::before{
+			position:absolute;
+			top:0px;
+			left:140px;
+			content: "";
+			width:1px;
+			height: 100%;
+			opacity: 0;
+			transform: scale(0);
+			background:$grey;
+			animation: mymove1 0.8s forwards ease-in-out;
+		}
+	}
+
+	.collapse-header{
+		position:relative;
+			&::after{
+				position:absolute;
+				top:-15px;
+				left:140px;
+				content: "";
+				width:1px;
+				height: calc(100% + 30px);
+				opacity: 0;
+				transform: scale(0);
+				background:$grey;
+				animation: reversemove1 0.8s forwards ease-in-out;
+			}
+		}
+
+	&--active{
+		box-shadow: 0 0 15px 0px #ccc;
+
+		.subscription-panel--usage{
+			&::before{
+				animation: mymove  0.8s normal forwards ease-in-out;
+
+			}
+		}
+		
+		.collapse-header{
+			&::after{
+				background:$grey;
+				animation: reversemove 0.8s forwards ease-in-out;
+			}
+		}
+		
+
+	}
+
+}
+.low-balance-wrap {
+	width: 105px;
+	.form-label {
+		@include font($pt-sans-r, $size:10px, $line-height:13px);
+		color:$ex-gray-med;
+		margin-bottom:0px;
+		letter-spacing: 0px;
+    	display: inline-block;
+    	vertical-align: middle;
+    	width: 100%;
+	}
+}
+.low-balance__content {
+	color:$ex-pri-blue;
+    display: inline-block;
+    .lesser-than-icon{
+		display: inline-block;
+		color:$text-pri-red;
+		@include font($oswald-l, $size:20px, $line-height:1px);
+		font-size: 25px;
+		transform: translateY(2px);
+	}
+	.doller-icon{
+		    font-family: "Oswald-Light",sans-serif;
+	}
+}
+
+
+@keyframes mymove {
+    0%   {
+    	// height:0;
+    	transform: scale(0);
+    	opacity: 0;
+    }
+    100% {
+    	transform: scale(1);
+    	// height: 100%;
+    	opacity: 1;
+    }
+}
+
+
+@keyframes mymove1 {
+    0%   {
+    	// height: 100%;
+    	opacity: 1;
+    	transform: scale(1);
+    }
+    100% {
+    	transform: scale(0);
+    	// height: 0;
+    	opacity: 0;
+    }
+}
+
+@keyframes reversemove {
+    0%   {
+    	// height:0;
+    	transform: scale(0);
+    	opacity: 0;
+    }
+    100% {
+    	transform: scale(1);
+    	// height: calc(100% + 30px);
+    	opacity: 1;
+    }
+}
+
+
+@keyframes reversemove1 {
+    0%   {
+    	// height: calc(100% + 30px);
+    	transform: scale(1);
+    	opacity: 1;
+    }
+    100% {
+    	transform: scale(0);
+    	// height: 0;
+    	opacity: 0;
+    }
+}
+
+@keyframes bordermove {
+    0%   {
+    	// height:0;
+    	transform: translateY(-60%) scale(0);
+    	opacity: 0;
+    }
+    100% {
+    	transform: translateY(-60%) scale(1);
+    	// height: calc(100% + 30px);
+    	opacity: 1;
+    }
+}
+
+
+@keyframes bordermove1 {
+    0%   {
+    	// height: calc(100% + 30px);
+    	transform: translateY(-60%) scale(1);
+    	opacity: 1;
+    }
+    100% {
+    	transform: translateY(-60%) scale(0);
+    	// height: 0;
+    	opacity: 0;
+    }
+}
+
+.collapse-header{
+	padding:0;
+}
+.collapse-body{
+	position:relative;
+	&::before{
+		position:absolute;
+		top:50%;
+		left:0;
+		content: "";
+		width: 2px;
+		height: 220px;
+		background:$ex-pri-dark-blue;
+		transform: translateY(-60%);
+		animation: bordermove  0.8s normal forwards ease-in-out;
+		z-index: 10;
+	}
+
+	.subscription-panel__name{
+		display: inline-block;
+	}
+
+	.label-text{
+		display: block;
+	}
+	
+	
+	.subscription-panel__item{
+		padding: 13px 5px 13px 0;
+		
+		align-items: flex-start;
+		&:first-of-type{
+			padding-top:26px;
+		}
+	}
+	
+	.subscription-panel__item::before{
+		content:none;
+	}
+
+
+}
+.no-flex{
+	display: block;
+}
+
+.subscription-panel__item.edit-balance-detail{
+	transition: box-shadow 0.5s ease;
+
+	&:before{
+		height: 40px;
+	}
+}
+
+.subscription-panel__item.edit-balance-detail--active{
+	
+	// &::before, .subscription-panel__item::before{
+	// 	content:none;
+	// }
+}
+
+// .subscription-panel-wrapper.filter-checkbox
+
+.alert-type{
+
+	@include font($pt-sans-r, $size:10px, $line-height:13px);
+	color: $ex-gray-med;
+
+	&__name{
+		font-family: $pt-sans-b;
+		color:$ex-gray-darker;
+	}
+}
+
+.selct-wrapper.form-recharge-account .bootstrap-select.btn-group .dropdown-menu li{
+	    margin: 5px 0;
+}
+
+.selct-wrapper.form-recharge-account .dropdown-toggle{
+	background:$white;
+	width:105px;
+	padding: 8px 12px;
+	vertical-align:middle;
+	height:40px;
+	border:1px solid $grey;
+}
+
+.selct-wrapper.form-recharge-account .dropdown-toggle::after {
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+}
+
+.form-recharge-account {
+	.open>.btn-default.dropdown-toggle::after {
+	    content: "\e925";
+	}
+}
+.selct-wrapper{
+	.btn{
+		font-size: 9px;
+	}
+
+	.bootstrap-select.btn-group .dropdown-menu{
+		width: calc(100% + 3px);
+    	margin-top: -1px;
+	}
+
+	// @include flex-box(space-between, center);
+	display:inline-block;
+	vertical-align: middle;
+
+	.form-group{
+		margin-right:18px;
+		margin-bottom:0;
+		display: inline-block;
+		&:last-of-type{
+			margin-right:0;
+		}
+
+	}
+}
+
+.selct-wrapper--meter{
+	display:inline-block;
+	label{
+		@include font($pt-sans-r, $size:10px, $line-height:13px);
+		color:$ex-gray-med;
+		margin-bottom:5px;
+		letter-spacing: 0px;
+	}
+}
+
+.form-input-small{
+	width: 70px !important;
+}
+
+.select.form-group--small{
+	.btn, .btn-group.open .dropdown-toggle{
+		padding:8px;
+	}
+	.btn-default.dropdown-toggle::after{
+		 right: 5px;
+   		 top: 45%;
+	}
+	 .dropdown-menu{
+	 	width:100%;
+	 	margin-top:-1px;
+	 }
+
+
+}
+
+.btn-wrapper{
+	// @include flex-box(space-between, center);
+	display:inline-block;
+	float:right;
+	margin-right:20px;
+
+	.contact-method__add{
+		float: none;
+	}
+}
+
+.form-group--small2{
+	// @include flex-box(space-between, center);
+	 .form-group{
+	 	margin-bottom: 0;
+	 	display: inline-block;
+	 	vertical-align: middle;
+	 }
+}
+
+.form-group--small2{
+	label{
+		font-size: 12px;
+		padding: 0 5px;
+		display: inline-block;
+	}
+}
+
+.weeks-days{
+	// flex:1 0 auto;
+	display:inline-block;
+	margin-left:10px;
+}
+
+.week{
+	padding-left: 0;
+    list-style-type: none;
+    border:1px solid $grey;
+    border-radius:2px;
+    height: 30px;
+}
+
+.day{
+	@include font($pt-sans-b, $size:10px, $line-height:29px);
+	color:$ex-gray-med;
+	border-right:1px solid $grey;
+	
+	&:last-of-type{
+		border-right:0;
+	}
+
+	&--blue{
+		color:$text-pri-blue;
+	}
+}
+
+
+.edit-btn--visible{
+	opacity: 1;
+	margin-left:30px;
+}
+
+.modified-flex{
+	justify-content:flex-end;
+	border-top:1px solid $grey;
+	margin-right:-20px;		
+}
+
+.collapse-body .subscription-panel__item.modified-flex{
+	padding-bottom:0;
+	padding-top:13px;
+}
+
+
+
+.edit-btn--usage{
+	margin-left:-10px;
+	opacity:1;
+}
+
+
+.filter-checkbox .label-text{
+	cursor:pointer;
+}
+
+.filter-checkbox input[type="checkbox"]:checked:disabled+.label-text{
+	cursor:initial;
+}
+
+.pending-disconnect{
+	background:$ex-pri-red;
+
+	&::before{
+		content:none;
+	}
+	&__info{
+		@include font($pt-sans-b, $size:10px, $line-height:14px);
+		color:$white;
+		width: 262px;
+    	margin-right: 10px;
+    	display: inline-block;
+    	vertical-align: middle;
+	}
+	&__img{
+		padding-right:10px;
+	}
+	.edit-btn {
+		opacity: 1;
+	}
+	.subscription-panel__name{
+		color:$white;
+	}
+}
+
+.edit-btn--usage{
+	opacity:0;
+}
+.edit-balance-detail:hover{
+	.edit-btn--usage{
+		opacity:1;
+	}
+}

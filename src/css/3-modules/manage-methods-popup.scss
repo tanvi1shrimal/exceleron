@@ -1,0 +1,92 @@
+.payment-methods-header{
+	border-bottom:0;
+	padding:25px;
+}
+
+.payment-methods-body{
+	padding:15px 25px 30px 25px;
+    // margin-top: -45px;
+}
+
+.payment-methods{
+	&:not(:first-of-type){
+		margin-top:35px;
+	}	
+}
+
+.payment-wrapper{
+	margin-bottom:20px;
+	.btn--blue{
+		// padding:9px 15px;
+	    float: right;
+	}
+}
+
+.payments-heading{
+	@include font($oswald-b, $size: 14px, $line-height: 24px);
+	color:$ex-gray-darker;
+	position: relative;
+	padding-left:35px;
+	display:inline-block;
+	transform: translateY(8px);
+	&::before {
+		position: absolute;
+	    left: 0;
+	    top: 60%;
+	    content: "";
+	    background-image: url(../images/card-type1.png);
+	    background-image: url(../images/card-type1.png);
+	    background-repeat: no-repeat;
+	    height: 100%;
+	    width: 100%;
+	    transform: translateY(-50%);
+	    filter: grayscale(100%);
+	}
+}
+
+.payments-heading--acount{
+	&::before{
+		background-image: url(../images/bank-account.png);
+		background-repeat: no-repeat;
+	}
+
+}
+
+.remove-link{
+	display:inline-block;
+	position:relative;
+	@include font($pt-sans-r, $size: 12px, $line-height: 22px);
+	text-decoration:underline;
+	text-transform:uppercase;
+	padding-right:20px;
+	color:$ex-gray-med;
+	cursor: pointer;
+
+	&::after {
+		content: "\e916";
+		font-family: exceleron;
+		position:absolute;
+		right:0;
+		top:50%;
+		transform: translateY(-50%);
+		font-size: 18px;
+	}
+}
+
+.card-details {
+	padding:20px;
+	background:$bg-skyGrey;
+	margin-bottom:2px;
+	display:table;
+	width:100%;
+	.payment{ 	 	
+		display: table-cell;
+	}
+
+	.remove-link{
+		display: table-cell;
+		vertical-align: middle;
+    	text-align: right;
+	}
+}
+

@@ -1,0 +1,177 @@
+//Card Weather-forcast/Usage Styles
+.card-climatelist {
+	padding-bottom: 0;
+	height: calc(100% - 6px); // 6px = space between each card
+	.card-header {
+		margin-bottom: 15px;
+	}
+}
+
+
+
+.table {
+	margin-bottom: 0;
+	&--type1 {
+		thead {
+			tr {
+				background: rgba(181,227,230,0.15);
+				th {
+					text-transform: uppercase;
+					border-bottom:0;
+					padding: 11px 20px;
+					vertical-align: middle;
+					&.th1 {
+						width: 40%;
+					}
+					&.th2 {
+						width: 20%;
+					}
+					&.th3 {
+						width: 40%;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					border-top: 0;
+					border-bottom: 1px solid #e7e8e9;
+					padding: 10px 20px;
+					vertical-align: middle;
+				}
+				&:last-child {
+					td {
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.table-weatherforecast-usage {
+	width: 100%;
+	display: block;
+	.weather-thead-col1 {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		&__icon {
+	  		padding-right: 2px;
+	  	}
+	  	.ex-icon-cloud {
+			color: $ex-gray-darker;
+			opacity: 0.4;
+			font-size: 18px;
+			vertical-align: top;
+		}
+		
+		&__title {
+			@include font($oswald-r, 12px);
+			color: $ex-gray-med;
+		}
+		
+		&__value {
+			@include font($oswald-b, 18px);
+			color: $ex-navy;
+			padding: 0 8px;
+		}
+	}
+	
+	.weather-thead-col2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		&__separator {
+			background: $ex-gray-light;
+			width: 1px;
+			height: 50px;
+			position: absolute;
+			top: -75%;
+			left: 50%;
+		}
+		&__circle {
+			background: $ex-gray-light;
+			width: 20px;
+			height: 20px;
+			display: block;
+			border-radius: 50%;
+			@include font($oswald-b, 10px, 20px);
+			color: $white;
+			text-align: center;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	
+	.weather-thead-col3 {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		
+		&__title {
+			@include font($oswald-r, 12px);
+			color: $ex-gray-med;
+		}
+		
+		&__currency {
+			@include font($oswald-l, 20px);
+			color: $ex-gray-light;
+			padding: 0 8px;
+		}
+		
+		&__value {
+			@include font($oswald-b, 18px);
+			color: $ex-navy;
+		}
+	}
+	
+	.weather-tbody-col1 {
+		&__icon {
+			padding-right: 2px;
+		}
+		.ex-icon-cloud {
+			color: $ex-gray-darker;
+			opacity: 0.4;
+			font-size: 18px;
+			vertical-align: top;
+		}
+		&__values {
+			@include font($oswald-b, 14px);
+			color: $ex-navy;
+			padding: 0 5px;
+
+			.divider {
+				display: inline-block;
+				margin: 0px 3px;
+				color: $ex-gray-light;
+			}
+		}
+	}
+
+	.weather-tbody-col2 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include font($pt-sans-r, 12px, 16px);
+		color: $ex-gray-dark;
+		text-transform: uppercase;
+	}
+	
+	.weather-tbody-col3 {
+		text-align: right;
+		
+		&__currency {
+			@include font($oswald-l, 14px);
+			color: $ex-gray-med;
+		}
+		
+		&__values {
+			@include font($oswald-b, 14px);
+			color: $ex-navy;
+		}
+	}
+
+}

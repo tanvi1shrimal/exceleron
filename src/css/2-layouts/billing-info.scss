@@ -1,0 +1,347 @@
+.billing-info-header {
+    // @include flex-box(space-between, center);
+    margin-bottom: 35px;
+    h1 {
+        margin:0;
+        display: inline-block;
+        transform: translateY(-50%);
+    }
+    a{
+        padding:6px 10px;
+        font-size: 10px;
+        display: inline-block;
+        float: right;
+    }
+}
+.billing-info{
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+	  -webkit-appearance: none; 
+	  margin: 0; 
+	}
+
+	&__wrapper{
+		padding:20px 15px 15px 15px;
+		background:$white;
+	}
+}
+
+.billing-heading-container{
+	padding:20px 0 15px 0;
+	@include border;
+}
+
+.account-info{
+	&__title{
+		@include font($oswald-b, $size: 20px, $line-height: 30px);
+		color:$ex-gray-darker;
+		text-transform:uppercase;
+	}
+	&__value{
+		@include font($oswald-r, $size: 11px, $line-height: 21px);
+		color:$ex-gray-darker;
+		// margin-bottom:3px;
+		text-transform:uppercase;
+	}
+}
+
+.billing-heading{
+	@include font($oswald-b, $size: 11px, $line-height: 21px);
+	color:$ex-gray-darker;
+	text-transform:uppercase;
+	display:inline-block;
+}
+
+.billing-subtitle {
+	@include font($oswald-r, $size: 9px, $line-height: 19px);
+	color:$ex-gray-med;
+	margin-bottom:3px;
+	text-transform:uppercase;
+}
+
+.address-wraper{
+	padding:15px 0;
+	@include border;
+	address{
+		@include font($pt-sans-r, $size: 11px, $line-height: 20px);
+		color:$ex-gray-darker;
+		margin-bottom: 0;
+	}
+}
+
+.tax{
+	padding:18px 0 30px 0;
+	
+	// .form-group {
+	// 	display: flex;
+	//     justify-content: space-between;
+	//     align-items: center;
+	// }
+
+	label{
+		margin-bottom: 0;
+		display: inline-block;
+	}
+	.form-input{
+		float: right !important;
+	}
+
+	&:last-of-type{
+		padding-bottom:20px;
+	}
+}
+
+.tax--border {
+	@include border;
+}
+
+.meters {
+	margin-top:8px;
+}
+
+.add-link{
+	@include font($pt-sans-r, $size: 9px, $line-height: 20px);
+	color:$ex-gray-med;
+	text-transform:uppercase;
+	text-decoration:underline;
+}
+
+.add-link--right{
+	float:right;
+}
+
+.flex-info{
+	// @include flex-box(space-between, center);
+}
+
+.flex-info--meter{	
+	@include border;
+}
+
+.flex-info--padd{
+	padding:15px 0;
+	&:last-of-type{
+		padding-bottom:5px;
+	}
+}
+
+
+
+
+.billing-info{
+	
+	&__list{
+		padding-left:15px;
+	}
+	&__item, &__value{
+		@include font($pt-sans-r, $size: 11px, $line-height: 20px);
+		color:$ex-gray-darker;
+	}
+	
+	&__item{
+			display: inline-block;
+		}
+	&__value{
+		display: inline-block;
+		float: right;
+		font-weight: bold;
+	}
+}
+
+
+.billing-info__wrapper{
+
+	.billing-info__list{
+	    counter-reset: list;
+    	margin-bottom: 0;
+    	margin-top: 10px;
+
+	}
+	.billing-info__list > li {
+	    list-style: none;
+	    position: relative;
+	    padding: 10px 0;
+	}
+	.billing-info__list > li:before {
+	   counter-increment: list;
+	    content: counter(list,lower-alpha) ") ";
+	    position: absolute;
+	    left: -1.4em;
+	    top: 50%;
+	    font-size: 11px;
+	    transform: translateY(-50%);
+	}
+}
+
+.billing-info-details{
+	@include border;
+	padding-bottom:15px;
+}
+
+.grand-total{
+	padding:15px 0;
+	.billing-heading{
+		font-size: 13px;
+		display: inline-block;
+	}
+	.billing-info__value{
+		font-family: $oswald-b;
+		font-size: 14px;
+	}
+}
+
+.billing-info__list2.billing-info__list {
+	margin-top:3px;
+}
+.billing-info__list2.billing-info__list > li:before {
+	content:"+";
+	left:-1em;
+}
+
+.amount-owned{
+	padding:18px 15px;
+	background:$bg-skyGrey;
+	margin:20px 0 15px 0;
+	.billing-heading{
+		@include font($pt-sans-b, $size: 16px, $line-height: 24px);
+		color:$ex-gray-darker;
+		text-transform: capitalize;
+		display: inline-block;
+	}
+	.billing-info__value{
+		@include font($oswald-l, $size: 17px, $line-height: 20px);
+		color:$ex-gray-light;
+		float: right;
+		margin-top:3px;
+		.amount{
+			@include font($oswald-b, $size: 20px, $line-height: 20px);
+			color:$ex-gray-darker;
+		}
+	}
+	
+}
+
+
+//accordina
+.panel-billing{
+	// box-shadow: 0px 0px 8px 3px rgba(235, 232, 232, 0.79);
+	// margin-bottom:20px;
+
+	&.actives{
+		// box-shadow: 0px 0px 8px 3px rgba(235, 232, 232, 0.79);
+	}
+
+	.panel-filter__title{
+		@include font($oswald-b, $size: 10px, $line-height: 20px);
+	}
+	
+	.panel-filter__title>a {
+	    color: $ex-gray-med;
+	}
+	.panel-title>a[aria-expanded="true"] {
+	    color: $white;
+	}
+	.panel-heading.actives.panel-title>a:hover{
+		color:$white;
+	}
+
+	&.panel-filter .actives {
+	    background: $text-pri-blue;
+	    border: none;
+	}
+}
+
+.sub-total{
+	margin-right: 15px!important;
+    float: right;
+    font-family: $oswald-l;
+    font-size: 10px !important;
+    em {
+    	font-style:normal;
+    	font-family: $oswald-b;
+    }
+}
+.account-details{
+	background:$bg-skyGrey;
+	margin-bottom: 20px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	// height:200px;
+}
+
+
+.billing-info__wrapper .billing-info__list.account-details__list{
+	margin-top:0;
+	.billing-info__item, .billing-info__value{
+		font-size: 12px;
+		display: inline-block;
+	}
+	.form-input{
+		width:42px;
+		height: 25px;
+		padding: 5px 10px;
+	}
+}
+.billing-info__wrapper .billing-info__list.account-details__list>li{
+	&::before{
+		content: none;
+	}
+}
+
+.panel-filter.panel-billing.panel-heading{
+	border-top: 1px solid $grey-border;
+}
+
+
+.account-details__list{
+	padding:15px;
+	// @include flex-box(space-between, center);
+	.charge__buttons{
+		// display: inline-block;
+		// transform: translateY(5px);
+		// margin-left: 10px;
+	}
+
+	.billing-info__item{
+		// @include flex-box(center, center);
+		&> span {
+			max-width: 140px;
+			width:100%;
+		}
+
+		.charge__buttons{
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+
+.account-details__item{
+	// @include flex-box(space-between, center);
+
+	.billing-info__value{
+		display: table !important;
+
+		span{
+			display: table-cell;
+			vertical-align: middle;
+			padding-right: 5px;
+		}
+	}
+}
+
+
+.account-info-sub1{
+	.meter-details{
+		margin-bottom: 0;
+	}
+}
+.account-info-sub2{
+	.meter-details{
+		margin-right: 48px;
+		&:last-of-type{
+			margin-right:0;
+		}
+	}
+}

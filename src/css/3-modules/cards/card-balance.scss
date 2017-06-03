@@ -1,0 +1,275 @@
+.card-balance,
+.card-usage,
+.card-charges,
+.card-auto-recharge {
+
+	.card-header {
+		margin-bottom: 25px;
+	}
+
+	.card-body {
+		margin-bottom: 15px;
+	}
+
+	.card-footer {
+		
+		padding-top: 15px;
+		border-top: 1px solid #ccc;
+
+		.btn{
+			float:right;
+		}
+	}
+
+}
+
+.card-balance {
+	.usage-info:first-child {
+		margin-right: 50px;
+	}
+
+	.charges-block{
+		display: table;
+		width: 100%;
+
+		&__value{
+			display: table-cell;
+		}
+
+		&__icon{
+			display: table-cell;
+			text-align: right;
+			vertical-align: middle;
+		}
+	}
+	.card-footer{
+		display: table;
+		width: 100%;	
+	}
+
+}
+
+.card-usage {
+	.usage-info:first-child {
+		margin: 0px;
+	}
+
+	.card-footer {
+		// justify-content: space-between;
+		display: table;
+		width: 100%;
+	}
+}
+
+.charges-block {
+
+	display:table-cell;
+	.label-currency {
+		font-size: 38px;
+	}
+
+	&__title {
+		// flex: 1 0 100%;
+		@include font($oswald-r, 12px);
+		color: $ex-gray-med;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+	}
+
+	&__value {
+		@include font($oswald-r, 50px);
+		color: $ex-navy;
+		display: inline-block;
+
+		sup {
+			@include font($oswald-l);
+			color: $ex-gray-light;
+		}
+
+		.ex-icon-angleleft{
+			color:$ex-pri-red;
+			font-size: 35px;
+		}
+	}
+
+	&__icon {
+		padding-right: 30px;
+	}
+}
+
+.usage-info {
+	text-transform: uppercase;
+	display: table-cell;
+    vertical-align: bottom; //middle
+
+	&__title {
+		@include font($oswald-r, 12px);
+		margin-bottom: 10px;
+		color: $ex-gray-med;
+	}
+
+	&__value {
+		display: block;
+		@include font($oswald-r, 12px);
+		color: $ex-navy;
+
+		.fa {
+			display: inline-block;
+			margin-right: 5px;
+		}
+
+		sup {
+			@include font($oswald-b);
+			left: 2px;
+		}
+	}
+
+	&__longarrow {
+		font-size: 18px;
+		vertical-align: bottom;
+		&.longarrowdown {
+			transform: rotate(-180deg);
+			vertical-align: middle;
+		}
+	}
+	&--right{
+		text-align:right;
+	}
+}
+
+
+
+// CARD Charges
+
+.card-charges {
+
+	.card-body {
+		// display: flex;
+		display: table;
+		margin-bottom: 50px;
+
+		.charges-block {
+			// flex: 1 0 50%;
+
+			&:first-child {
+				padding-right: 70px;
+				border-right: 1px dashed #000;
+			}
+
+			&:nth-child(2) {
+				padding-left: 70px;
+
+			}
+		}
+	}
+
+
+	.card-footer {
+		// display:table;
+		border: 0px;
+		padding-top: 0px;
+	}
+}
+
+// .btn--table{
+// 	display:table-cell;
+// }
+
+.card-footer{
+	display:table;
+	width:100%;
+}
+
+.usage-details {
+	padding: 0px 30px;
+	border-right: 1px dashed #000;
+	display:table-cell;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+		border-right: 0px;
+
+	}
+
+	&__title,
+	&__value {
+		display: inline-block;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		margin-right: 10px;
+		font-family: 'Oswald-Bold', sans-serif;
+		font-size: 12px;
+	}
+
+	&__value {
+		font-family: 'Oswald-Bold', sans-serif;
+		font-size: 14px;
+
+	}
+}
+
+
+//style for payment-sumarry
+.usage-info__number{
+	position: relative;
+    display: inline-block;
+    padding-left: 35px;
+	&::before{
+		position:absolute;
+		top:0;
+		left:0;
+		// transform: translateY(-50%);
+		content: "";
+		background:url('../images/card-type1.png');
+		background-repeat:no-repeat;
+		height: 20px;
+		width: 100%;
+	}
+}
+
+.label-currency{
+	font-family:$oswald-l;
+	color:$ex-gray-med;
+}
+
+
+.usage-details__title {
+	position:relative;
+	padding-left:25px;
+	color:$text-pri-blue;
+	&::before{
+		position: absolute;
+	    top: -8px;
+	    left: -4px;
+	    font-family: 'exceleron';
+	}
+}
+.usage-details-electicity{
+	&::before{
+		content: '\e919';
+		color: $ex-pri-blue;
+		font-size: 24px;
+	}
+}
+
+.usage-details-water{
+	&::before{
+		content: "\e918";
+		color: $ex-pri-blue;
+		font-size: 24px;
+	}
+}
+
+.usage-details-gas{
+	&::before{
+		content: "\e90f";
+		color: $ex-pri-blue;
+		font-size: 24px;
+	}
+}

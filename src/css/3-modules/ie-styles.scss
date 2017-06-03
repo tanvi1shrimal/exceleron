@@ -1,0 +1,87 @@
+
+// :root{
+// 	.card-usage{
+// 		background-color: red\0;
+// 	}
+// }
+
+
+
+//Styles for FLOW-3
+.usage-info__number::before{
+	left:-33px\0;
+}
+
+.usage-info__number{
+	padding-left:0\0;
+}
+
+// .card.card-usage, .card.card-auto-recharge{
+// 	padding: 20px 20px 10px 20px\0;
+// }
+
+.card.card-graph-expand,{
+	padding:20px\0;
+}
+
+.usage-info__title{
+	margin-bottom:5px;
+}
+.card-details{
+	.remove-link::after{
+		transform: translateY(0)\0;
+	}
+}
+
+
+//style for FLOW2-FILTERS
+
+//Filter Content
+.data-filters {
+	transform:translateX(100%)\0;
+
+}
+.show-data {
+	transform:translateX(0)\0;
+}
+
+
+//style for FLOW1
+.row-stretch{
+	display:block\0;
+}
+
+.card-des-graph{
+	height:697px\0 !important;
+}
+
+.panel-pager__item--nav{
+	line-height:16px\0;
+}
+
+.card-des-graph {
+ 	height:690px;
+}
+
+.card-climatelist{
+	padding:20px 20px 10px 20px\0;
+}
+
+.recharge-amount{
+	padding:20px 20px 30px 20px\0;
+}
+
+.pay-by-cash{
+	padding:45px 40px\0;
+}
+
+//styles only for IE-9
+@media screen and (min-width:0) and (min-resolution:.001dpcm) {
+   .card-des-graph {
+ 		height:690px;
+	}
+	.card-climatelist{
+		padding:15px 20px 0 20px\0;
+	}
+
+}

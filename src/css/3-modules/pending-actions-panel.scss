@@ -1,0 +1,129 @@
+.pending-actions-panel {
+	padding: 25px;
+	background: #fff;
+
+	.panel-title {
+		font-family: "Oswald-Bold", sans-serif;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+
+}
+
+
+.pending-actions {
+	@include clearfix();
+}
+
+.pending-actions-card {
+	height: 180px;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	
+	display:table;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	// flex-direction: column;
+
+	&:nth-child(n + 5) {
+		border-bottom: 1px solid #ccc;
+	}
+
+	&:nth-child(4n) {
+		border-right: 1px solid #ccc;
+	}
+
+
+	.title {
+		font-family: "Oswald-Bold", sans-serif;
+		font-size: 14px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		color: #666;
+	}
+
+}
+
+.table-row{
+	display:table-row;
+}
+
+.table-cell{
+	display:table-cell;
+	vertical-align: middle;
+	text-align:center;	
+}
+
+
+// Payment Recieved card
+
+.payment-recieved {
+	// display: flex;
+	text-align: center;
+
+	&__value {
+		font-family: "Oswald-Regular", sans-serif;
+		font-size: 45px;
+		margin-bottom: 5px;
+	}
+
+	&__info {
+		font-family: "Oswald-Bold", sans-serif;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+}
+
+
+.alerts-pushed-container {
+	display:table;
+	width: 100%;
+	padding: 0px 40px;
+
+	.alerts-pushed {
+		text-align: center;
+		display: table-cell;
+
+		&__value {
+			font-family: "Oswald-Regular", sans-serif;
+			font-size: 45px;
+		}
+
+		&__label {
+			font-family: "Oswald-Regular", sans-serif;
+			font-size: 12px;
+			text-transform: uppercase;
+
+			.ex {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 16px;
+				position: relative;
+				top: -1px;
+			}
+		}
+
+	}
+
+}
+
+
+
+.pending-status-info {
+	display: table;
+    margin: 0 auto;
+
+	&__icon {
+		padding-right: 10px;
+	    display: table-cell;
+	    vertical-align: middle;
+	}
+
+	&__value {
+		font-family: "Oswald-Regular", sans-serif;
+		font-size: 45px;
+		display: table-cell;
+    	vertical-align: middle;
+	}
+}

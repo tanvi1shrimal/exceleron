@@ -1,0 +1,218 @@
+.card-expand-block {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	display: none;
+	z-index: 10;
+
+	.card {
+		z-index: 1;
+		position: static;
+		margin-bottom: 0px;
+		height: 100%;
+	} 
+	.ex-icon-electricity {
+		font-size: 35px;
+		color: $ex-pri-blue;
+	}
+	.ex-icon-water {
+		font-size: 35px;
+		color: $ex-pri-blue;
+	}
+	.ex-icon-gas {
+		font-size: 35px;
+		color: $ex-pri-blue;
+	}
+
+	.row {
+		@include make-row($gutter: 50px);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch;
+
+		.col-md-4 {
+			@include make-md-column(4, $gutter: 50px);
+		}
+
+		.col-md-8 {
+			@include make-md-column(8, $gutter: 50px);
+		}
+	}
+
+	.row-01 {
+		margin-bottom: 80px;
+		.card {
+			// margin-right: 50px;
+
+			// &:last-child {
+			// 	margin-right: 0;
+			// }
+		}
+	}
+
+
+	&.shown {
+		display: block;
+	}
+
+}
+
+
+.container-expand {
+	width: 1200px;
+	margin: 0 auto;
+
+	margin-top: 100px;
+}
+
+
+
+// CARD - 01: Card Consumption
+
+.card-consumption {
+
+	.card-body {
+		height: 100%;
+		padding: 10px 0px;
+		position: relative;
+		// display: flex;
+		// flex-wrap: wrap;
+		// flex-direction: column;
+		// justify-content: space-between;
+		z-index: 0;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(20px, -50%);
+			height: calc(100% - 20px);
+			width: 1px;
+			border-right: 2px dashed $ex-gray-light;
+			z-index: -1;
+		}
+	}
+
+}
+
+.consumption-rate {
+	display:table;
+	vertical-align: middle;
+
+	&__month,
+	&__value {
+		display: inline-block;
+	}
+
+	&__month {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		@include font($oswald-b, 12px, 40px);
+		background-color: $ex-gray-light;
+		text-align: center;
+		text-transform: uppercase;
+		color: $ex-gray-dark;
+		margin-right: 6px;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&__value {
+		@include font($oswald-r, 25px);
+		color: $ex-navy;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&:first-of-type{
+		margin-bottom: 90px;
+	}
+}
+
+.consumption-percent {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(28px, -50%);
+	display: inline-block;
+	padding: 4px;
+	background-color: $ex-pri-green;
+	color: #fff;
+	border-radius: 2px;
+
+	sup {
+		color: #fff;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translate(-4px, -50%) rotate(45deg);
+		transform-origin: center;
+		width: 8px;
+		height: 8px;
+		background-color: $ex-pri-green;
+	}
+}
+
+
+
+// Card Usage - SM
+
+.card-usage-sm {
+
+	.card-header {
+		margin-bottom: 25px;
+	}
+
+	&__value {
+		@include font($oswald-r, 50px);
+		color: $ex-navy;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+
+		sup {
+			@include font($oswald-l);
+			color: $ex-gray-light;
+		}
+	}
+
+	&__amount {
+		@include font($oswald-r, 20px);
+		color: $ex-navy;
+	}
+
+}
+
+
+// Card Threashold
+
+.card-threashold {
+	.card-body {
+		margin-bottom: 30px;
+	}
+
+	.card-footer {
+		padding-top: 20px;
+		border-top: 1px solid #ccc;
+	}
+}
+
+.threashold-info {
+	&__amount {
+		@include font($oswald-r, 25px);
+		margin-bottom: 25px;
+		color: $ex-navy;
+	}
+
+	&__text {
+		@include font($pt-sans-r, 12px);
+		color: $ex-gray-darker;
+	}
+}

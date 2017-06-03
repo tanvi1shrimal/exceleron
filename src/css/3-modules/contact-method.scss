@@ -1,0 +1,96 @@
+.contact-method {
+	padding: 15px;
+	background: #f4f6f8;
+
+
+	&__header {
+		@include clearfix();
+		margin-bottom: 15px;
+	}
+
+	&__title {
+		float: left;
+		@include font($oswald-b, 11px);
+		text-transform: uppercase;
+		color: $ex-gray-darker;
+		.ex {
+			font-size: 15px;
+    		vertical-align: top;
+    		&-icon-sms {
+    			font-size: 18px;
+    			vertical-align: sub;
+    		}
+    		&-icon-call {
+    			font-size: 20px;
+    			vertical-align: sub;
+    		}
+		}
+	}
+
+	&__add {
+		float: right;
+		@include font($pt-sans-r, 10px);
+		text-transform: uppercase;
+	}
+
+	&__dropdown {
+		
+		// .select {
+		
+		// }
+
+		label {
+			display: inline-block;
+			@include font($oswald-r, 10px);
+			text-transform: uppercase;
+			color: $ex-gray-med;
+			margin-right: 10px;
+			margin-bottom: 0px;
+			letter-spacing: 0.2px;
+			width: 65px;
+    		transform: translateY(45%);
+		}
+
+		.bootstrap-select {
+		}
+
+		&--two {
+			@include clearfix();
+			
+
+			.select {
+				float: left;
+				width: 48%;
+				
+				label:first-of-type{
+					width:20px;
+				}
+				&:first-child {
+					margin-right: 4%;
+					label:first-of-type{
+						width:38px;
+					}
+				}
+			}
+
+		}
+
+	}
+
+	&__list {
+		height: 90px;
+	}
+
+	.alert__info {
+		font-size: 11px;
+		display: inline-block;
+	}
+
+
+	&--expert {
+		.contact-method__list {
+			height: 150px;
+		}
+	}
+
+}

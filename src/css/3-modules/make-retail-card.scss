@@ -1,0 +1,164 @@
+
+.payment-locations{
+	
+	.card {
+		// height:520px;
+		background:$white;
+		margin-bottom:6px;
+	}
+	
+	.card-title{
+		display: inline-block;
+	}
+	.card-body {
+		position: relative;
+		background:$bg-light-blue;
+		height: 450px;
+	}
+
+	.card-header{
+		padding-bottom: 20px;
+	}
+
+
+	//styles for payment-location heading and checkboxes
+	
+	.payment-location-map{
+		display: inline-block;
+		float: right;
+		padding:0;
+		.filter-checkbox__box{
+			display: inline-block;
+			margin-bottom: 0;
+
+			padding-right:30px;
+		}
+	}
+}
+
+.retail-payment {
+	position:absolute;
+	top:50%;
+	left:60px;
+	width:640px;
+	// display: flex;
+	transform:translateY(-50%);
+}
+
+.pay-by-cash, .pament-provider{
+	// width:50%;
+	// background:green;
+	// flex: 1 0 auto;
+}
+
+.pay-by-cash {
+	background:$bg-skyGrey;;
+	padding: 40px;
+
+	&__heading {
+		@include font($oswald-b, $size: 30px, $line-height: 42px);
+		text-transform: uppercase;
+		color:$ex-gray-darker;
+		max-width: 160px;
+	}
+
+	&__info {
+		@include font($pt-sans-b, $size: 14px, $line-height: 20px);
+		color:$ex-gray-med;
+		margin-top:15px;
+		max-width: 200px;
+
+	}
+
+	&__list {
+		margin-top:30px;
+	}
+
+	&__items {
+		margin-right:16px;
+		&:last-of-type {
+			margin-right:0;
+		}
+		i {
+			color: $ex-gray-dark;
+			opacity: 0.5;
+			font-size: 40px;
+		}
+	}
+
+	&__deatil {
+		@include font($oswald-b, $size: 12px, $line-height: 22px);
+		color:$ex-gray-dark;
+		text-transform: uppercase;
+		margin-top:12px;
+
+	}
+
+}
+
+ .pament-provider {
+ 	background:$white;
+	padding: 30px 40px 20px 40px;
+
+ 	&__heading {
+ 		@include font($oswald-b, $size: 14px, $line-height: 22px);
+ 		color:$ex-gray-darker;
+ 		text-transform: uppercase;
+ 		margin-bottom: 15px;
+ 	}
+
+ 	&__form {
+ 		.radio-box {
+ 			display: block;
+ 			margin:3px 0;
+
+ 			&:first-of-type {
+ 				margin-bottom: -10px;
+ 			}
+ 		}
+ 		.label-text {
+ 			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    cursor: pointer;
+ 		}
+		input[type="radio"] + .label-text:before {
+
+			font-family: "exceleron";
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			text-transform: normal;
+			line-height: 1;
+			margin-right: 5px;
+		    width: 1em;
+		    display: inline-block;
+		    transition: all 0.3s ease;
+
+		}
+		 input[type="radio"] {
+				
+			display: none;
+			
+			& + .label-text:before{
+				content: "\e903";
+			    font-size: 22px;
+				margin-right: 10px;
+				color:$ex-gray-med;
+
+			}
+
+			&:checked + .label-text:before {
+				content: "\e902";
+				color:$text-pri-blue;
+			}
+		}
+ 	}
+
+ }
+
+ .btn--retail-payment {
+ 	font-size:20px;	
+ 	    padding: 18px 40px;
+  	margin: 20px -20px 0 -20px;
+ }

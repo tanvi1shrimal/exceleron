@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exceleron Dashboard - Account Balance</title>
+	<link rel="stylesheet" href="css/main.css">
+
+	<script data-main="js/config" src="js/vendor/require.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+</head>
+<body>
+
+
+	<div class="main-container clearfix">
+
+		<nav class="navigation-panel" id="navigation-panel">
+			<a href="#" class="brand-logo">
+				<img src="images/brand-logo.png" alt="" class="brand-logo__img">
+			</a>
+			<div class="user-acc-info">
+				<div class="user-acc-info__name">Addision Grey</div>
+				<div class="user-acc-info__number">#28758394</div>
+				<div class="user-acc-info__address">
+					301 W.. Atlantic Blvd, Coral Spring, Austin, Texas - 78701
+				</div>
+				<div class="acc-status">
+					<span class="acc-status__label">Account Status</span>
+					<span class="acc-status__info ex-color-green">Active</span>
+				</div>
+
+			</div>
+
+			<div class="navigation-links">
+				<div class="" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-navigation">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title panel-navigation__title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span class="ex-icon-account"></span> Account</a>
+							</h4>
+						</div>
+						<div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+							<ul class="list-group">
+								<li class="active"><a href="#">Summary 01</a></li>
+								<li><a href="#">Add Adjustment</a></li>
+								<li><a href="#">Manage Unpain Payment</a></li>
+								<li><a href="#">Manage Meter</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="panel panel-navigation">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title panel-navigation__title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="ex-icon-history"></span>History</a>
+							</h4>
+						</div>
+						<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<ul class="list-group">
+								<li><a href="#">Summary 02</a></li>
+								<li><a href="#">Add Adjustment</a></li>
+								<li><a href="#">Manage Unpain Payment</a></li>
+								<li><a href="#">Manage Meter</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="panel panel-navigation">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<h4 class="panel-title panel-navigation__title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span class="ex-icon-payment"></span>Payment</a>
+							</h4>
+						</div>
+						<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+							<ul class="list-group">
+								<li><a href="#">Summary 03</a></li>
+								<li><a href="#">Add Adjustment</a></li>
+								<li><a href="#">Manage Unpain Payment</a></li>
+								<li><a href="#">Manage Meter</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="panel panel-navigation">
+						<div class="panel-heading" role="tab" id="headingThree">
+							<h4 class="panel-title panel-navigation__title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><span class="ex-icon-settings"></span>Settings</a>
+							</h4>
+						</div>
+						<div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+							<ul class="list-group">
+								<li><a href="#">Summary 04</a></li>
+								<li><a href="#">Add Adjustment</a></li>
+								<li><a href="#">Manage Unpain Payment</a></li>
+								<li><a href="#">Manage Meter</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="panel panel-navigation">
+						<div class="panel-heading" role="tab" id="headingfour">
+							<h4 class="panel-title panel-navigation__title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><span class="ex-icon-users"></span>Users</a>
+							</h4>
+						</div>
+						<div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingfour">
+							<ul class="list-group">
+								<li><a href="#">Summary 05</a></li>
+								<li><a href="#">Add Adjustment</a></li>
+								<li><a href="#">Manage Unpain Payment</a></li>
+								<li><a href="#">Manage Meter</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</nav>
+		<!-- END: Navigation Panel -->
+
+
+		<div class="dashboard-main">
+
+			<div class="dashboard-header">
+				<h1 class="screen-name">Summary</h1>
+				<a href="" class="logout">Log out <span class="ex-icon-logout"></span></a>
+			</div>
+			<!-- End: Dashboard Header -->
+
+			<div class="dashboard-content">
+				<div class="alert-tile alert-tile--danger">
+					<div class="alert-tile__content pull-left">
+						<div class="alert-tile__title">
+							Currently your service is <b>disconnected</b>
+						</div>
+						<div class="alert-tile__info">
+							Please make a minimum payment of <b>$63.04</b> now to reconnect service.
+						</div>
+					</div>
+					<div class="pull-right">
+
+						<div class="alert-info-icon">
+							<i class="ex-icon-infocircle"></i>
+							
+							<div class="recharge-wrap">
+								<div class="recharge-info-tip">
+									<div class="recharge-info-title">$ <span>63.04</span> Includes: </div>
+									<div class="recharge-info-list">
+										<div class="recharge-info-list__title">Balance</div>
+										<div class="recharge-info-list__value">$ <span> 19.13</span></div>
+									</div>
+									<div class="recharge-info-list">
+										<div class="recharge-info-list__title recharge-info-list__title--plus">Minimum Credit Balance</div>
+										<div class="recharge-info-list__value">$ <span> 25.00</span></div>
+									</div>
+									<div class="recharge-info-list">
+										<div class="recharge-info-list__title recharge-info-list__title--plus">Debt Recovery Amount</div>
+										<div class="recharge-info-list__value">$ <span> 18.91</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button type="button" class="alert-tile__btn">Recharge Now</button>
+					</div>
+				</div>
+				<!-- End: Alert-Danger -->
+
+				<div class="alert-tile alert-tile--success">
+					<div class="alert-tile__content pull-left">
+						<div class="alert-tile__title">
+							Currently your service is <b>disconnected</b>
+						</div>
+						<div class="alert-tile__info">
+							Your adjustiment of <span>$12.45</span> has been successfully added. It will reflect shortly.
+						</div>
+					</div>
+					<div class="pull-right">
+						<button type="button" class="alert-tile__btn">Got It. Thanks!</button>
+					</div>
+				</div>
+				<!-- End: Alert-Success -->
+
+				<div class="row">
+
+					<div class="col-md-8">
+
+						<div class="card card-balance">
+							<div class="card-header">
+								<div class="card-title ex-color-blue">Account Balance</div>
+								<a href="" class="card-expand"><span class="ex-icon-expand"></span></a>
+							</div>
+							<div class="card-body">
+								<div class="charges-block">
+									<div class="charges-block__value"><span class="label-currency">$</span> 1400.32</div>
+									<div class="charges-block__icon">
+										<img src="images/dollarbag-2.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="usage-info">
+									<div class="usage-info__title">Past 30 days usage</div>
+									<div class="usage-info__value">$ 419.83</div>
+								</div>
+
+								<div class="usage-info">
+									<div class="usage-info__title">Increased consumption by</div>
+									<div class="usage-info__value ex-color-red">
+										<span class="usage-info__longarrow ex-icon-longarrowup"></span>13<sup>%</sup>
+									</div>
+								</div>
+							</div> 
+						</div>
+						<!-- End: Card Balance -->
+
+					</div>
+
+					<div class="col-md-4">
+
+						<div class="card card-usage">
+							<div class="card-header">
+								<div class="card-title ex-color-blue">
+									<i class="ex-icon-electricity"></i>
+									Electricity
+								</div>
+								<a href="" class="card-expand"><span class="ex-icon-expand"></span></a>
+							</div>
+							<div class="card-body">
+								<div class="charges-block">
+									<div class="charges-block__value">39 <sup>KWH</sup></div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="usage-info">
+									<div class="usage-info__title">Yesterday's usage</div>
+									<div class="usage-info__value">2.52 <sup>KWH</sup></div>
+								</div>
+
+								<div class="usage-info">
+									<div class="usage-info__value ex-color-red">
+										<span class="usage-info__longarrow ex-icon-longarrowup"></span>13<sup>%</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End: Card Usage -->
+
+					</div>
+					
+
+					<div class="col-md-4">
+
+						<div class="card card-usage">
+							<div class="card-header">
+								<div class="card-title ex-color-blue">
+									<i class="ex-icon-water"></i>
+									 Water
+								</div>
+								<a href="" class="card-expand"><span class="ex-icon-expand"></span></a>
+							</div>
+							<div class="card-body">
+								<div class="charges-block">
+									<div class="charges-block__value">12.3 <sup>GAL</sup></div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="usage-info">
+									<div class="usage-info__title">Yesterday's usage</div>
+									<div class="usage-info__value">10.6 <sup>GAL</sup></div>
+								</div>
+
+								<div class="usage-info">
+									<div class="usage-info__value ex-color-green">
+										<span class="usage-info__longarrow ex-icon-longarrowup longarrowdown"></span>13<sup>%</sup>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End: Card Usage -->
+
+
+					</div>
+
+					<div class="col-md-4">
+
+						<div class="card card-usage">
+							<div class="card-header">
+								<div class="card-title ex-color-blue">
+									<i class="ex-icon-gas"></i>
+									 Gas
+								</div>
+								<a href="" class="card-expand"><span class="ex-icon-expand"></span></a>
+							</div>
+							<div class="card-body">
+								<div class="charges-block">
+									<div class="charges-block__value">9.7 <sup>THM</sup></div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="usage-info">
+									<div class="usage-info__title">Yesterday's usage</div>
+									<div class="usage-info__value">11.8 <sup>THM</sup></div>
+								</div>
+
+								<div class="usage-info">
+									<div class="usage-info__value ex-color-red">
+										<span class="usage-info__longarrow ex-icon-longarrowup ex-color-red"></span>13<sup>%</sup>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- End: Card Usage -->
+
+
+					</div>
+
+				</div>
+
+				<div class="row row-stretch">
+
+					<div class="col-md-8">
+						
+						<div class="card card-recharge">
+							<div class="card-header">
+								<div class="card-title">Estimated days left</div>
+							</div>
+							<div class="card-body">
+								<div class="recharge-viz"></div>
+								<div class="recharge-cta">
+									<div class="recharge-cta__text">Based on our Forcast your current Balance will be exhausted by</div>
+									<div class="recharge-cta__date">27 <sup>th</sup> Jan 2017</div>
+									<button class="btn btn--blue">Recharge Now</button>
+								</div>
+							</div>
+						</div>
+						<!-- End: Card Recharge -->
+
+						<div class="card card-alert-switch">
+							<div class="card-header">
+								<div class="card-title">Message Alerts</div>
+								<a href="#" class="cta-more">Advance Mode >></a>
+							</div>
+							<div class="card-body">
+								<div class="alert-notification">
+									<div class="alert-notification__type alert-notification__type--mobile">Mobile</div>
+									<div class="alert-notification__value">+34 2863 287</div>
+									<div class="alert-notification__switch">
+										<label class="btn-switch">
+											<input type="checkbox">
+											<div class="slider"></div>
+										</label>
+									</div>
+								</div>
+								<!-- End: alert notification -->
+
+								<div class="alert-notification">
+									<div class="alert-notification__type alert-notification__type--email">Email</div>
+									<div class="alert-notification__value">addison@gmail.com</div>
+									<div class="alert-notification__switch">
+										<label class="btn-switch">
+											<input type="checkbox">
+											<div class="slider"></div>
+										</label>
+									</div>
+								</div>
+								<!-- End: alert notification -->
+
+								<div class="alert-notification">
+									<div class="alert-notification__type alert-notification__type--mobile">SMS</div>
+									<div class="alert-notification__value">+34 2863 287</div>
+									<div class="alert-notification__switch">
+										<label class="btn-switch">
+											<input type="checkbox">
+											<div class="slider"></div>
+										</label>
+									</div>
+								</div>
+								<!-- End: alert notification -->
+
+							</div>
+						</div>
+						<!-- End: Card Alert Switch -->
+
+						<div class="card card-alerts">
+							<div class="card-header">
+								<div class="card-title">Alerts</div>
+							</div>
+							<div class="card-body scroll-y" id="alerts-scroll-sec">
+								<div class="alert alert--green">
+									<div class="alert__time">Today 3:28pm</div>
+									<div class="alert__info">Payment reminder sent by SMS to <b>+34 2863 287</b></div>
+								</div>
+
+								<div class="alert alert--red">
+									<div class="alert__time">Today 3:28pm</div>
+									<div class="alert__info">Payment reminder sent by SMS to <b>+34 2863 287</b></div>
+								</div>
+
+								<div class="alert alert--green">
+									<div class="alert__time">Today 3:28pm</div>
+									<div class="alert__info">Payment reminder sent by SMS to <b>+34 2863 287</b></div>
+								</div>
+							</div>
+						</div>
+						<!-- End: Card Alerts -->
+
+					</div>
+
+					<div class="col-md-12">
+						<div class="card card-des-graph">
+							<div class="card-header">
+								<div class="card-title">Daily Energy Saved</div>
+							</div>
+							<div class="card-body"></div>
+						</div>
+						<!-- End: Daily Energy Saved graph card  -->
+					</div>
+
+				</div>
+
+
+				<div class="row row-stretch">
+
+					<div class="col-md-8">
+
+						<div class="card card-tips">
+							<div class="card-header">
+								<div class="card-title">Energy saving Tips</div>
+							</div>
+							<div class="card-body">
+								<div class="tips-slider">
+									<div class="tips-wrapper">
+										<div class="tips-content">
+											<div class="tips-info">
+												<span class="tips-info__text">Replace 5 of your home’s frequently used lights with energy-efficient LED powered bulbed.</span>
+												<div class="tips-info__hightlights">
+													<span class="title">You can <span class="title-dark">save upto</span></span>
+													<span class="currency">$ <span class="value">75</span> /yr</span>
+												</div>
+											</div>
+											<div class="tips-icon">
+												<img src="images/energysaving-idea.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="tips-wrapper">
+										<div class="tips-content">
+											<div class="tips-info">
+												<span class="tips-info__text">Replace 5 of your home’s frequently used lights with energy-efficient LED powered bulbed.</span>
+												<div class="tips-info__hightlights">
+													<span class="title">You can <span class="title-dark">save upto</span></span>
+													<span class="currency">$ <span class="value">75</span> /yr</span>
+												</div>
+											</div>
+											<div class="tips-icon">
+												<img src="images/energysaving-idea.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="tips-wrapper">
+										<div class="tips-content">
+											<div class="tips-info">
+												<span class="tips-info__text">Replace 5 of your home’s frequently used lights with energy-efficient LED powered bulbed.</span>
+												<div class="tips-info__hightlights">
+													<span class="title">You can <span class="title-dark">save upto</span></span>
+													<span class="currency">$ <span class="value">75</span> /yr</span>
+												</div>
+											</div>
+											<div class="tips-icon">
+												<img src="images/energysaving-idea.png" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="tips-wrapper">
+										<div class="tips-content">
+											<div class="tips-info">
+												<span class="tips-info__text">Replace 5 of your home’s frequently used lights with energy-efficient LED powered bulbed.</span>
+												<div class="tips-info__hightlights">
+													<span class="title">You can <span class="title-dark">save upto</span></span>
+													<span class="currency">$ <span class="value">75</span> /yr</span>
+												</div>
+											</div>
+											<div class="tips-icon">
+												<img src="images/energysaving-idea.png" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End: Card Tips -->
+
+						<div class="card card-utility">
+							<div class="card-header">
+								<div class="card-title">Daily Average utility usage</div>
+								<div class="utility-value">$ <span>3.77</span></div>
+							</div>
+							<div class="card-body">
+								<div class="utility-viz">
+								</div>
+							</div>
+						</div>
+						<!-- End: Card Utility -->
+
+					</div>
+
+					<div class="col-md-12">
+
+						<div class="card card-climatelist">
+							<div class="card-header">
+								<div class="card-title">Weather Forecast VS Usage</div>
+							</div>
+
+							<div class="card-body">
+								<div class="table-weatherforecast-usage">
+									<table class="table table--type1">
+										<thead>
+											<tr class="table-header">
+												<th class="th1">
+													<div class="weather-thead-col1">
+														<span class="weather-thead-col1__icon">
+															<i class="ex-icon-cloud"></i>
+														</span>
+														<span class="weather-thead-col1__value">21.5<sup>o</sup></span>
+														<span class="weather-thead-col1__title">Avg. Temp</span>
+													</div>
+												</th>
+												<th class="th2">
+													<div class="weather-thead-col2">
+														<span class="weather-thead-col2__separator"></span>
+														<span class="weather-thead-col2__circle">VS</span>
+													</div>
+												</th>
+												<th class="th3">
+													<div class="weather-thead-col3">
+														<span class="weather-thead-col3__title">Total Charge</span>
+														<span class="weather-thead-col3__currency">$</span>
+														<span class="weather-thead-col3__value">140.32</span>
+													</div>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="weather-tbody-col1">
+														<span class="weather-tbody-col1__icon"><i class="ex-icon-cloud"></i></span>
+														<span class="weather-tbody-col1__values">28<sup>o</sup> <span class="divider">|</span> 17<sup>o</sup></span>
+													</div>
+												</td>
+												<td>
+													<span class="weather-tbody-col2">Mon day</span>
+												</td>
+												<td>
+													<div class="weather-tbody-col3">
+														<span class="weather-tbody-col3__currency">$ <span class="weather-tbody-col3__values"> 18.72</span></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="weather-tbody-col1">
+														<span class="weather-tbody-col1__icon"><i class="ex-icon-cloud"></i></span>
+														<span class="weather-tbody-col1__values">28<sup>o</sup> <span class="divider">|</span> 17<sup>o</sup></span>
+													</div>
+												</td>
+												<td>
+													<span class="weather-tbody-col2">Tues day</span>
+												</td>
+												<td>
+													<div class="weather-tbody-col3">
+														<span class="weather-tbody-col3__currency">$ <span class="weather-tbody-col3__values"> 18.72</span></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="weather-tbody-col1">
+														<span class="weather-tbody-col1__icon"><i class="ex-icon-cloud"></i></span>
+														<span class="weather-tbody-col1__values">28<sup>o</sup> <span class="divider">|</span> 17<sup>o</sup></span>
+													</div>
+												</td>
+												<td>
+													<span class="weather-tbody-col2">Wednes day</span>
+												</td>
+												<td>
+													<div class="weather-tbody-col3">
+														<span class="weather-tbody-col3__currency">$ <span class="weather-tbody-col3__values"> 18.72</span></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="weather-tbody-col1">
+														<span class="weather-tbody-col1__icon"><i class="ex-icon-cloud"></i></span>
+														<span class="weather-tbody-col1__values">28<sup>o</sup> <span class="divider">|</span> 17<sup>o</sup></span>
+													</div>
+												</td>
+												<td>
+													<span class="weather-tbody-col2">Thurs day</span>
+												</td>
+												<td>
+													<div class="weather-tbody-col3">
+														<span class="weather-tbody-col3__currency">$ <span class="weather-tbody-col3__values"> 18.72</span></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="weather-tbody-col1">
+														<span class="weather-tbody-col1__icon"><i class="ex-icon-cloud"></i></span>
+														<span class="weather-tbody-col1__values">28<sup>o</sup> <span class="divider">|</span> 17<sup>o</sup></span>
+													</div>
+												</td>
+												<td>
+													<span class="weather-tbody-col2">Fri day</span>
+												</td>
+												<td>
+													<div class="weather-tbody-col3">
+														<span class="weather-tbody-col3__currency">$ <span class="weather-tbody-col3__values"> 18.72</span></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="weather-tbody-col1">
+														<span class="weather-tbody-col1__icon"><i class="ex-icon-cloud"></i></span>
+														<span class="weather-tbody-col1__values">28<sup>o</sup> <span class="divider">|</span> 17<sup>o</sup></span>
+													</div>
+												</td>
+												<td>
+													<span class="weather-tbody-col2">Satur day</span>
+												</td>
+												<td>
+													<div class="weather-tbody-col3">
+														<span class="weather-tbody-col3__currency">$ <span class="weather-tbody-col3__values"> 18.72</span></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="weather-tbody-col1">
+														<span class="weather-tbody-col1__icon"><i class="ex-icon-cloud"></i></span>
+														<span class="weather-tbody-col1__values">28<sup>o</sup> <span class="divider">|</span> 17<sup>o</sup></span>
+													</div>
+												</td>
+												<td>
+													<span class="weather-tbody-col2">Sun day</span>
+												</td>
+												<td>
+													<div class="weather-tbody-col3">
+														<span class="weather-tbody-col3__currency">$ <span class="weather-tbody-col3__values"> 18.72</span></span>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							
+						</div>
+						<!-- End: Card Weather vs Usage -->
+
+					</div>
+					
+				</div>
+
+			</div>
+			<!-- END: Dashboard Content -->
+
+		</div>
+		<!-- END: Dashboard Main -->
+		
+
+		<!-- Dashboard Footer -->
+		<footer class="dashboard-footer">
+			<div class="row">
+				<div class="col-md-offset-5 col-md-4">
+					<ul class="footer-links">
+						<li class="footer-links__item"><a href="#">Terms &amp; Conditions</a></li>
+						<li class="footer-links__item"><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-5">
+					<ul class="footer-login-info">
+						<li class="footer-login-info__item"><b>Debug mode activated</b></li>
+						<li class="footer-login-info__item">Login: chris@exceleron.com</li>
+						<li class="footer-login-info__item">PAMS version:v3.3-924-gcfe87e8-dity</li>
+					</ul>
+				</div>
+				<div class="col-md-5">
+					<ul class="footer-login-info">
+						<li class="footer-login-info__item">UTM</li>
+						<li class="footer-login-info__item">Hostname: pams3.aws.exceleron.com</li>
+						<li class="footer-login-info__item">Request Time: 377ms(exec), 402ms (total)</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<p class="copyright-text">
+					MyUsage.com@2017. All rights reserved.  9-10-2016 1:57:02 AM CDT
+				</p>
+			</div>
+
+		</footer>
+
+
+		<!-- CARD EXPAND BLOCK -->
+		<div class="card-expand-block">
+
+			<div class="container-expand">
+				<div class="row row-01">
+					<div class="col-md-4">
+						<div class="card card-01 card-consumption">
+							<div class="card-body">
+								<div class="consumption-rate">
+									<span class="consumption-rate__month">Oct</span>
+									<span class="consumption-rate__value">$ 389.42</span>
+								</div>
+								<div class="consumption-rate">
+									<span class="consumption-rate__month">Nov</span>
+									<span class="consumption-rate__value">$ 419.83</span>
+								</div>
+								<span class="consumption-percent">+13<sup>%</sup></span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-8">
+						<div class="card card-02 card-balance">
+							<div class="card-header">
+									<div class="card-title ex-color-blue">Account Balance</div>
+								</div>
+								<div class="card-body">
+									<div class="charges-block">
+										<div class="charges-block__value"><span class="label-currency">$</span> 1400.32</div>
+										<div class="charges-block__icon">
+											<img src="images/dollarbag-2.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<div class="usage-info">
+										<div class="usage-info__title">Past 30 days usage</div>
+										<div class="usage-info__value">$ 419.83</div>
+									</div>
+
+									<div class="usage-info">
+										<div class="usage-info__title">Increased consumption by</div>
+										<div class="usage-info__value ex-color-red">
+											<span class="fa fa-long-arrow-up ex-color-red"></span>13 <sup>%</sup>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card card-threashold">
+							<div class="card-body">
+								<div class="threashold-info">
+									<div class="threashold-info__amount">$ 99.57</div>
+									<div class="threashold-info__text">To reach monthly low balance threshold</div>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="usage-info">
+									<div class="usage-info__title">Past 30 days usage</div>
+									<div class="usage-info__value ex-color-red">+ 13<sup>%</sup></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row row-02">
+					<div class="col-md-4">
+						<div class="card card-usage-sm">
+							<div class="card-header">
+								<i class="ex-icon-electricity"></i>
+							</div>
+							<div class="card-body">
+								<div class="card-usage-sm__value">39 <sup>KWH</sup></div>
+								<div class="card-usage-sm__amount">$ 419.83</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card card-usage-sm">
+							<div class="card-header">
+								<i class="ex-icon-water"></i>
+							</div>
+							<div class="card-body">
+								<div class="card-usage-sm__value">12.3 <sup>GAL</sup></div>
+								<div class="card-usage-sm__amount">$ 419.83</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card card-usage-sm">
+							<div class="card-header">
+								<i class="ex-icon-gas"></i>
+							</div>
+							<div class="card-body">
+								<div class="card-usage-sm__value">9.5 <sup>THM</sup></div>
+								<div class="card-usage-sm__amount">$ 419.83</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+	<!-- END Main Container -->
+
+
+	<script>
+	require(['config'], function(){
+			require(['bootstrap', 'main', 'login', 'customScrollbar']);
+		});
+
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+.table-options {
+	@include clearfix();
+	padding: 5px 15px;
+}
+
+.table-options-field {
+	clear: both;
+}
+.table-options-box {
+	@include clearfix();
+	&__list {
+		margin-bottom: 0;
+		@include font($oswald-r, 14px);
+		display: inline-block;
+    	vertical-align: middle;
+    	li {
+	    	a {
+	    		color: $ex-gray-med;
+	    		text-decoration: underline;
+	    		&:hover {
+	    			color: $ex-navy;
+	    		}
+	    	}
+	    	&.active a {
+    			color: $ex-navy;
+    		}
+    	}
+	}
+	&__label {
+		float: left;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		@include font($oswald-b, 10px);
+		color: $ex-gray-med;
+		text-transform: uppercase;
+	}
+
+	&__title {
+		display: inline-block;
+		@include font($oswald-b, 16px);
+		color: $ex-gray-darker;
+		text-transform: uppercase;
+		margin-right: 10px;
+	}
+
+	.btn-group {
+		.btn {
+			padding: 0px;
+			width: 25px;
+			height: 25px;
+			border-color: $ex-pri-blue;
+
+			&.active {
+				background: $ex-pri-blue;
+				color: $white;
+			}
+		}
+	}
+
+}
+
+.label-filter-list {
+	@include clearfix();
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.label-filter {
+	display: inline-block;
+	background: $ex-gray-light;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	float: left;
+	padding: 5px 8px;
+
+	&:last-child {
+		margin-right: 0px;
+	}
+
+	&__text {
+		@include font($oswald-b, 12px);
+		color: $ex-gray-darker;
+		text-transform: uppercase;
+		margin-right: 15px;
+	}
+
+	&__close {
+		cursor: pointer;
+		vertical-align: text-top;
+    	font-size: 15px;
+		color: $ex-gray-moredarker;
+	}
+}

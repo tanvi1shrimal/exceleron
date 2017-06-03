@@ -1,0 +1,273 @@
+.brighttheme {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.brighttheme.ui-pnotify-container {
+    padding: 20px 30px;
+    @include font($pt-sans-r);
+    border-radius: 7px;
+    // 
+    position: relative;
+    max-width: 500px;
+}
+
+.brighttheme .ui-pnotify-title {
+    margin-bottom: 0px;
+    font-size: 22px;
+    text-transform: none;
+    float: left;
+    margin-right: 10px;
+}
+
+.brighttheme .ui-pnotify-text {
+    font-size: 18px;
+    float: left;
+    padding-left: 70px;
+}
+
+// .brighttheme .ui-pnotify-title[style] + .ui-pnotify-text {
+//     float: left;
+// }
+
+.brighttheme-notice {
+    background-color: #ffffff;
+    // border: 0 solid #FF0;
+    box-shadow: 0 0 18px 3px rgba(0, 0, 0, 0.13);
+    color: $ex-gray-dark;
+}
+
+.brighttheme-info {
+    background-color: #e6fcfd;
+    // border: 0 solid #0286A5;
+    color: #012831;
+}
+
+.brighttheme-success {
+    background-color: #e6ffe9;
+    border: 0 solid #35DB00;
+    color: #104300;
+}
+
+.brighttheme-error {
+    background-color: #fde4e6;
+    // background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255, 255, 255, .3) 35px, rgba(255, 255, 255, .3) 70px);
+    border: 0 solid #FF1800;
+    color: #4F0800;
+}
+
+.brighttheme .ui-pnotify-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+
+    &::before {
+        content: "";
+        top: 0;
+        right: -20px;
+        width: 1px;
+        height: 100%;
+        background: #999;
+        display: block;
+        position: absolute;
+    }
+
+    span {
+        background: none;
+    }
+}
+
+.ui-pnotify-icon {
+    // width: 30px;
+    // height: 30px;
+
+    // margin-right: 20px;
+    // padding-right: 20px;
+    // box-sizing: content-box;
+    // border-right: 1px solid #ccc;
+
+    // padding-right: 20px;
+    // border-right: 1px solid #ccc;
+    // margin-right: 20px;
+
+    span {
+        background: none;
+    }
+}
+
+.brighttheme-icon-closer,
+.brighttheme-icon-info,
+.brighttheme-icon-notice,
+.brighttheme-icon-sticker,
+.brighttheme-icon-success {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    font-family: "Courier New", Courier, monospace;
+    border-radius: 50%;
+}
+
+.brighttheme-icon-closer:after,
+.brighttheme-icon-info:after,
+.brighttheme-icon-notice:after,
+.brighttheme-icon-sticker:after,
+.brighttheme-icon-success:after,
+.brighttheme-icon-error:after {
+    position: absolute;
+    top: 0;
+    left: 4px;
+
+    // 
+    top: 0;
+    left: 0;
+    content: "";
+
+    width: 30px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+}
+
+.brighttheme-icon-notice {
+    background-color: #2E2E00;
+    color: #FFFFA2;
+    margin-top: 2px;
+    // 
+    margin: 0px;
+}
+
+.brighttheme-icon-notice:after {
+    // content: "!";
+    background: url("../images/icon-info.png") no-repeat;
+}
+
+.brighttheme-icon-info {
+    background-color: #012831;
+    color: #8FCEDD;
+    margin-top: 2px;
+}
+
+.brighttheme-icon-info:after {
+    // content: "i";
+    background: url("../images/icon-info.png") no-repeat;
+}
+
+.brighttheme-icon-success {
+    background-color: #104300;
+    color: #AFF29A;
+    margin-top: 2px;
+}
+
+.brighttheme-icon-success:after {
+    // content: "\002713";
+    background: url("../images/icon-info.png") no-repeat;
+}
+
+.brighttheme-icon-error {
+    position: relative;
+    width: 0;
+    height: 0;
+    // border-left: 8px solid transparent;
+    // border-right: 8px solid transparent;
+    // border-bottom: 16px solid #2E0400;
+    font-size: 0;
+    line-height: 0;
+    color: #FFABA2;
+    margin-top: 1px;
+}
+
+.brighttheme-icon-error:after {
+    // position: absolute;
+    // top: 1px;
+    // left: -4px;
+    // font-size: 12px;
+    // font-weight: 700;
+    // line-height: 16px;
+    // font-family: "Courier New", Courier, monospace;
+    // content: "!";
+    // 
+    content: "";
+    background: url("../images/icon-info.png") no-repeat;
+}
+
+.brighttheme-icon-closer,
+.brighttheme-icon-sticker {
+    display: inline-block;
+}
+
+.brighttheme-icon-closer:after {
+    top: -4px;
+    content: "\002715";
+}
+
+.brighttheme-icon-sticker:after {
+    top: -5px;
+    content: "\01D1BC";
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.brighttheme-icon-sticker.brighttheme-icon-stuck:after {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.brighttheme .ui-pnotify-action-bar {
+    padding-top: 12px;
+}
+
+.brighttheme .ui-pnotify-action-bar input,
+.brighttheme .ui-pnotify-action-bar textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px!important;
+}
+
+.brighttheme .ui-pnotify-action-button {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 4px 8px;
+    border: none;
+    background: 0 0;
+}
+
+.brighttheme .ui-pnotify-action-button.btn-primary {
+    border: none;
+    border-radius: 0;
+}
+
+.brighttheme-notice .ui-pnotify-action-button.btn-primary {
+    background-color: #FF0;
+    color: #4F4F00;
+}
+
+.brighttheme-info .ui-pnotify-action-button.btn-primary {
+    background-color: #0286A5;
+    color: #012831;
+}
+
+.brighttheme-success .ui-pnotify-action-button.btn-primary {
+    background-color: #35DB00;
+    color: #104300;
+}
+
+.brighttheme-error .ui-pnotify-action-button.btn-primary {
+    background-color: #FF1800;
+    color: #4F0800;
+}

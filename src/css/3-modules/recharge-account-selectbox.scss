@@ -1,0 +1,284 @@
+
+
+.amount-heading {
+
+	&__currency {
+		font-family: 'Oswald-Regular';
+		font-size: 18px;
+		text-transform: uppercase;
+		padding-bottom: 35px;
+		position: relative;
+		&::after{
+			position: absolute;
+		    top: 28px;
+		    left: 0;
+		    content: "";
+		    height: 30px;
+		    width: 2px;
+		    border: 1px dashed #aeb6ba;
+		}	
+		span {
+			display: inline-block;
+		}
+	}
+
+	&__pay {
+		font-family: 'Oswald-Light';
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+}
+.form-amount {
+	input{
+		font-family: 'Oswald-Regular';
+		font-size: 12px;
+		text-transform: uppercase;
+		color:$white;
+		padding:18px 20px;
+		background:$text-pri-blue;
+		width: 100%;
+		box-shadow:none;
+		border:1px solid transparent;
+		outline:none;
+		::-webkit-input-placeholder {
+		  color:$white;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+		   color:$white;
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+		   color:$white;
+		}
+
+		:-ms-input-placeholder {  
+		   color:$white; 
+		}
+
+		
+
+		&:focus, &.active  {
+			background:$white;
+			color:$text-pri-blue;
+			// border-color: $lightGrey;
+			border-radius:2px;
+
+			::-webkit-input-placeholder {
+			  color:$text-pri-blue;
+			}
+
+			:-moz-placeholder { /* Firefox 18- */
+			   color:$text-pri-blue;
+			}
+
+			::-moz-placeholder {  /* Firefox 19+ */
+			   color:$text-pri-blue;
+			}
+
+			:-ms-input-placeholder {  
+			   color:$text-pri-blue; 
+			}
+		}
+		
+	}
+
+}
+.card-title--recharge-account{
+	padding-bottom:34px;
+}
+
+.form-recharge-account {
+
+	.bootstrap-select {
+		width: 97.6% !important;
+		left:3px;
+		@media(min-width: 1600px) {
+			width: 98.3% !important;
+		}
+	}
+	.dropdown-toggle{
+		border:1px solid transparent;
+		background:$bg-light-blue;
+		padding: 15px 20px;
+		position:relative;
+		&::after {
+			position:absolute;
+			right:20px;
+			top:15px;
+			// transform: translateY(-50%);
+			content: "\e924";
+			font-family: exceleron;
+			line-height: 1;
+			font-size: 16px;
+		}
+	}
+
+	.btn-default:active:hover, 
+	.btn-default:active:focus, 
+	.btn-default:active.focus, 
+	.btn-default.active:hover, 
+	.btn-default.active:focus, 
+	.btn-default.active.focus, 
+	{
+		border:1px solid transparent;
+		background:$bg-light-blue;
+		box-shadow:none;
+	}
+
+	.open>.btn-default.dropdown-toggle:hover, 
+	.open>.btn-default.dropdown-toggle:focus, 
+	.open>.btn-default.dropdown-toggle.focus,
+	.btn-default:active, .btn-default.active, 
+	.open>.btn-default.dropdown-toggle {
+		border:1px solid transparent;
+		background:$text-pri-blue;
+		box-shadow:none;
+		color:$white;
+		border-radius:0;
+	}
+	
+	.dropdown-menu  li a{
+		&:focus {
+			outline: none !important;
+		}
+	}
+	.bootstrap-select .dropdown-toggle:focus {
+	    outline: 0!important;
+	}
+	.dropdown-menu {
+		padding:0;
+		border:none;
+		border-radius:0;
+	}
+	.caret{
+			display: none;
+	}
+
+	.dropdown-menu .divider  {
+		display: none;
+	}
+
+	.bootstrap-select.btn-group .dropdown-menu li a.opt {
+		padding-left:20px;
+	}
+
+	.bootstrap-select.btn-group .dropdown-menu li {
+		margin: 20px 0;
+	}
+	.bootstrap-select.btn-group .dropdown-menu li.dropdown-header  {
+		margin: 20px 0 -10px 0;
+	}
+	.bootstrap-select.btn-group .dropdown-menu li.dropdown-header[data-optgroup="2"]{
+		margin-top:30px;
+	}
+	.dropdown-header .text {
+		font-family: 'Oswald-Bold';
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+	.dropdown-header .text .text-muted {
+		font-family: 'PTSans-Regular';
+		font-size: 12px;
+		text-decoration: underline;
+		text-transform: uppercase;
+		float: right;
+		cursor: pointer;
+	}		
+}
+
+
+//selection box-inner styling
+.option2 {
+	position:relative;
+
+	&::before{
+		position:absolute;
+		content:"";
+		left:20px;
+		top:-10px;
+		height:1px;
+		width:calc(100% - 20px);
+		// background:$lightGrey;
+	}
+}
+
+.payment {
+	&__method, &__code {
+		font-family: 'Oswald-Regular';
+			font-size: 12px;
+			text-transform: uppercase;
+	}
+	&__method {
+
+	}
+	&__code{
+		position:relative;
+		padding-left:30px;
+		margin-top: 10px;
+
+		&::before, &::after{
+			position:absolute;
+			left:0;
+			top:0;
+			content: "";
+			height: 15px;
+			width:15px;
+			background:#e1564b;
+			border-radius:50%;
+		}
+		 &::after {
+		 	left:10px;
+		 	background:#f4b458;
+		 	opacity: 0.9;
+		 }
+	}
+}
+
+//bank info
+.bank-info {
+	display:table;
+	&__bank-name, &__bank-number{
+		font-family: 'Oswald-Regular';
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+
+	&__image-wraper{
+	    padding-right: 15px;
+	    display: table-cell;
+	    vertical-align: middle;
+	}
+
+	&__bank-name{
+		padding-bottom:5px;
+	}
+}
+
+.bttn-default--recharge-account {
+	margin-top:10px;
+	padding: 11px 25px;
+}
+.form-group--no-mar {
+	margin-bottom: 0px;
+}
+
+.bootstrap-select.btn-group .dropdown-menu li small {
+	padding-left:0;
+}	
+
+.form-amount input::-webkit-input-placeholder {
+   color: $white;
+}
+
+.form-amount input:-moz-placeholder { /* Firefox 18- */
+   color: $white;  
+}
+
+.form-amount input::-moz-placeholder {  /* Firefox 19+ */
+   color: $white;  
+}
+
+.form-amount input:-ms-input-placeholder {  
+   color: $white;  
+}

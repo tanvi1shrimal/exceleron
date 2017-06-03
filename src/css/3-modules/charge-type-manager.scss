@@ -1,0 +1,141 @@
+.charge-manager-wrapper {
+	height: 700px;
+	position:relative;
+	background:$white;
+	overflow:hidden;
+	padding: 15px 0;
+}
+
+.charge-manager-content {
+	margin: 10px 20px 5px;
+}
+.manager-panel {
+	padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 0;
+    position:relative;
+	border:1px solid $grey-border;
+
+	&__item {
+		padding: 15px 10px 15px 0;
+	    position: relative;
+	    display: table;
+	    width: 100%;
+	    border-bottom: 1px solid #ecedee;
+	    &:last-of-type{
+			border-bottom:none;
+		}
+		.btn {
+			@include font($oswald-b, $size:9px, $line-height:10px);
+			padding: 6px 15px;
+    		text-transform: uppercase;
+		    margin: 2px 0px;
+		}
+		&::before{
+			position: absolute;
+		    left: 0;
+		    top: 50%;
+		    -webkit-transform: translateY(-50%);
+		    transform: translateY(-50%);
+		    content: "";
+		    background: #142d37;
+		    height: 50px;
+		    width: 2px;
+		}
+	}
+	&__name {
+		width: 245px;
+		font-weight: bold;
+    	padding: 0 20px 0 20px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    position: relative;
+	    &::after {
+	    	position: absolute;
+		    right: 0;
+		    top: 50%;
+		    -webkit-transform: translateY(-50%);
+		    transform: translateY(-50%);
+		    content: "";
+		    background: $grey;
+		    height: 100%;
+		    width: 1px;
+	    }
+	}
+	&__col {
+		width: auto;
+		font-weight: bold;
+    	padding: 0 0 0 20px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    .btn-wrapper {
+	    	margin-right: 0;
+	    	width: 165px;
+	    }
+	    .upcoming-rate {
+	    	position: relative;
+	    }
+	    .filter__notification {
+			position:absolute;
+			left:7px;
+			top:-6px;
+			width: 18px;
+			height: 18px;
+			padding-top:4px;
+		}
+	}
+	&__checkbox-box {
+		display: inline-block;
+	    vertical-align: middle;
+	    position: relative;
+	    padding: 0 0 0 10px;
+	}
+}
+.meter-charge, .meter-mapping, .meter-recurring, .meter-default {
+
+	&__heading {
+		@include font($oswald-r, $size:16px, $line-height:20px);
+ 		color:$ex-gray-darker;
+ 		text-transform:uppercase;
+ 		letter-spacing: 0.6px;
+    	display: inline-block;
+	} 
+	&__row {
+		display: block;
+		padding: 5px 0 0;
+	}
+	&__title {
+		@include font($oswald-l, $size:14px, $line-height:18px);
+ 		color:$ex-gray-med;
+ 		text-transform:uppercase;
+ 		display: inline-block;
+    	min-width:65px;
+	}
+	&__value {
+		@include font($oswald-b, $size:14px, $line-height:18px);
+ 		color:$ex-navy;
+ 		text-transform:uppercase;
+ 		padding: 0 0 0 10px;
+	} 
+	
+}
+.meter-charge {
+	&__title {
+		min-width: auto;
+	}
+}
+.meter-default {
+	&__inner-row {
+		display: inline-block;
+		padding: 0 18px 0 0;
+		&:last-of-type{
+			padding-right: 0;
+		}
+	} 
+	&__title {
+		min-width: auto;
+	}
+	&__value {
+
+	}
+}

@@ -1,0 +1,24 @@
+//Card Utility Styles
+.card-utility {
+	position: relative;
+	.card-header {
+		margin-bottom: 15px;
+	}
+	.utility-viz {
+		height: 118px;
+		&--advanced {
+			height: 151px;
+		}
+	}
+	.utility-value {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		@include font($oswald-l, 22px);
+		color: $ex-gray-light;
+		span {
+			@include font($oswald-b, 26px);
+			color: $ex-navy;
+		}
+	}
+}

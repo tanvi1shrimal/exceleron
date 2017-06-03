@@ -1,0 +1,162 @@
+// Card Alert Switch
+.card-alert-switch {
+	overflow: hidden;
+
+	.card-header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 28px;
+	}
+
+}
+
+.alert-notification {
+	@include clearfix();
+	text-transform: uppercase;
+	padding: 15px 0px;
+	position: relative;
+	transition: box-shadow .25s ease, background .25s ease;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: calc(15px + 8px); // 15 = ::before widt;
+		width: 100%;
+		height: 1px;
+		background: #ccc;
+	}
+
+	&:last-child {
+		padding-bottom: 5px;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	&__type,
+	&__value {
+		float: left;
+		font-family: 'Oswald-Regular', sans-serif;
+		font-size: 12px;
+		line-height: 24px;
+	}
+
+	&__type {
+		position: relative;
+		width: 65px;
+		padding-left: calc(18px + 8px); // 15 = ::before width
+		color: $ex-gray-moredarker;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 18px;
+			height: 18px;
+			
+			font-family: exceleron;
+    		text-align: center;
+			text-rendering: auto;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		&--mobile {
+			&::before {
+				content: "\e913";
+				font-size: 22px;
+			}
+		}
+
+		&--email {
+			&::before {
+				content: "\e914";
+				font-size: 22px;
+				top: -2px;
+			}
+		}
+
+		&--advanced {
+			width: 200px;
+		}
+	}
+
+	&__switch {
+		float: right;
+		pointer-events: none;
+	}
+
+	&:hover {
+		.alert__cta {
+		    opacity: 1;
+			pointer-events: auto;
+		}
+	}
+}
+
+
+.card-alert-switch .card-body.is-static {
+	position: static;
+}
+
+.alert-notification.is-open {
+	box-shadow: 20px 0px 0px 5px $white,
+				-20px 0px 0 5px $white,
+				-20px 0px 20px 5px rgba(0,0,0,0.3),
+				20px 0px 20px 5px rgba(0,0,0,0.3);
+	background: $white;
+	z-index: 2;
+	border-radius: 0px;
+	z-index: 100;
+
+	&::before {
+		display: none;
+	}
+
+	.alert__cta {
+		position: relative;
+		text-align: center;
+		transform: translate(0);
+	}
+	.btn--alert-edit {
+		display: none;
+	}
+
+	.btn--alert-save,
+	.btn--alert-delete {
+		display: block;
+	}
+
+	.alert-notification__value {
+		font-size: 11px;
+		padding: 7px;
+		height: auto;
+		line-height: 1.42857;
+	}
+
+	.alert-notification__switch {
+		pointer-events: visible;
+	}
+}
+
+.alert-notification.is-open {
+	.alert__cta {
+		left: 13px;
+		display: inline-block;
+		float: left;
+		right: 41px;
+	}
+	+ .alert {
+		margin-top: 47px;
+	}
+}
+
+.alert-notification.is-open {
+	.alert__cta {
+		opacity: 1;
+		pointer-events: auto;
+	}	
+}

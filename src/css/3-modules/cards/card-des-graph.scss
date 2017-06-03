@@ -1,0 +1,8 @@
+.row-stretch {
+	display: flex;
+	align-items: stretch;
+}
+
+.card-des-graph {
+	height: calc(100% - 6px) !important; // 6px = space between each card
+}

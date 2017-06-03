@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<html lang="en" class="ie ie8">
+	<meta charset="UTF-8">
+	<title>Exceleron Dashboard - Payment Summary</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script data-main="js/config" src="js/vendor/require.js"></script>
+</head>
+<body>
+	<main>
+		<div class="main-container clearfix">
+
+			<nav class="navigation-panel" id="navigation-panel">
+				<a href="#" class="brand-logo">
+					<img src="images/brand-logo.png" alt="" class="brand-logo__img">
+				</a>
+				<div class="user-acc-info">
+					<div class="user-acc-info__name">Addision Grey</div>
+					<div class="user-acc-info__number">#28758394</div>
+					<div class="user-acc-info__address">
+						301 W.. Atlantic Blvd, Coral Spring, Austin, Texas - 78701
+					</div>
+					<div class="acc-status">
+						<span class="acc-status__label">Account Status</span>
+						<span class="acc-status__info ex-color-green">Active</span>
+					</div>
+
+				</div>
+
+				<div class="navigation-links">
+					<div class="" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel panel-navigation">
+							<div class="panel-heading" role="tab" id="headingOne">
+								<h4 class="panel-title panel-navigation__title">
+									<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span class="ex-icon-account"></span> Account</a>
+								</h4>
+							</div>
+							<div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+								<ul class="list-group">
+									<li class="active"><a href="#">Summary 01</a></li>
+									<li><a href="#">Add Adjustment</a></li>
+									<li><a href="#">Manage Unpain Payment</a></li>
+									<li><a href="#">Manage Meter</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="panel panel-navigation">
+							<div class="panel-heading" role="tab" id="headingTwo">
+								<h4 class="panel-title panel-navigation__title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><span class="ex-icon-history"></span>History</a>
+								</h4>
+							</div>
+							<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<ul class="list-group">
+									<li><a href="#">Summary 02</a></li>
+									<li><a href="#">Add Adjustment</a></li>
+									<li><a href="#">Manage Unpain Payment</a></li>
+									<li><a href="#">Manage Meter</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="panel panel-navigation">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title panel-navigation__title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><span class="ex-icon-payment"></span>Payment</a>
+								</h4>
+							</div>
+							<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+								<ul class="list-group">
+									<li><a href="#">Summary 03</a></li>
+									<li><a href="#">Add Adjustment</a></li>
+									<li><a href="#">Manage Unpain Payment</a></li>
+									<li><a href="#">Manage Meter</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="panel panel-navigation">
+							<div class="panel-heading" role="tab" id="headingThree">
+								<h4 class="panel-title panel-navigation__title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><span class="ex-icon-settings"></span>Settings</a>
+								</h4>
+							</div>
+							<div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+								<ul class="list-group">
+									<li><a href="#">Summary 04</a></li>
+									<li><a href="#">Add Adjustment</a></li>
+									<li><a href="#">Manage Unpain Payment</a></li>
+									<li><a href="#">Manage Meter</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="panel panel-navigation">
+							<div class="panel-heading" role="tab" id="headingfour">
+								<h4 class="panel-title panel-navigation__title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"><span class="ex-icon-users"></span>Users</a>
+								</h4>
+							</div>
+							<div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingfour">
+								<ul class="list-group">
+									<li><a href="#">Summary 05</a></li>
+									<li><a href="#">Add Adjustment</a></li>
+									<li><a href="#">Manage Unpain Payment</a></li>
+									<li><a href="#">Manage Meter</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</nav>
+			<!-- END: Navigation Panel -->
+
+
+			<div class="dashboard-main">
+
+				<div class="dashboard-header">
+					<div class="dashboard-header__left">
+						<h1 class="screen-name">payment summary</h1>
+						<a href="#" class="btn" data-toggle="modal" data-target="#managePaymentMethod"> Manage Payment Method </a>
+
+					</div>
+					
+					<a href="" class="logout">Log out <span class="ex-icon-logout"></span></a>
+					
+				</div>
+				<!-- End: Dashboard Header -->
+
+				<div class="dashboard-content">
+					<!-- Row1 -->
+					<div class="row">
+						<div class="col-md-8">
+							<div class="card recharge-amount">
+								<div class="card-header">
+									<div class="card-title card-title--recharge-account">Recharge Account</div>
+								</div>
+								<div class="card-body clearfix">
+									<div class="amount-heading col-md-4">
+										<div class="amount-heading__currency">PAY <span>$</span></div>
+										<div class="amount-heading__pay">from</div>
+									</div>
+									 <form class="form-horizontal form-recharge-account col-md-16" role="form">
+									 	<div class="form-amount">
+									 		<input type="text" placeholder="Amount">
+									 	</div>
+									    <div class="form-group form-group--no-mar">
+									        <select id="basic" class="selectpicker payment-selectpicker" title="Select payment Method">
+										        <optgroup label="CARDS (2)" data-subtext="ADD A CARD +">
+											        <option data-content="<div class='payment'>
+															<div class='payment__method'>Payment method used</div>
+															<div class='payment__code'>xxxx xxxx xxxx 3974</div>
+											        </div>" > 
+											        </option>
+											       <option class="option2" data-content="<div class='payment'>
+															<div class='payment__method'>Payment method used</div>
+															<div class='payment__code'>xxxx xxxx xxxx 3974</div>
+											        </div>" > 
+											        </option>
+										        </optgroup>
+										        <optgroup class="option-group2" label="BANK ACCOUNT (2)" data-subtext="ADD An account +">
+											        <option data-content="<div class='bank-info'>
+															<div class='bank-info__image-wraper'>
+																<img src='./images/citi-bank.png' class='bank-info__image'>
+															</div>
+															<div class='bank-info__content-wraper'>
+																<div class='bank-info__bank-name'>Citibank Chase</div>
+																<div class='bank-info__bank-number'>3976479369235</div>
+															</div>
+														</div>"> 
+											        </option>
+											         <option class="option2" data-content="<div class='bank-info'>
+															<div class='bank-info__image-wraper'>
+																<img src='./images/jp-morgan.png' class='bank-info__image'>
+															</div>
+															<div class='bank-info__content-wraper'>
+																<div class='bank-info__bank-name'>JP Morgan Chase</div>
+																<div class='bank-info__bank-number'>3976479369235</div>
+															</div>
+														</div>"> 
+											        </option> 		
+										        </optgroup>
+									        </select>
+									        <button class="btn btn--recharge-acc">Recharge </button>
+									    </div>
+									</form>
+								</div>
+								<div class="card-footer">
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="card card-usage">
+								<div class="card-header">
+									<div class="card-title">Last Payment</div>
+								</div>
+								<div class="card-body">
+									<div class="charges-block">
+										<div class="charges-block__title">On 29/10/2016</div>
+										<div class="charges-block__value">
+											<span class="label-currency">$</span>
+											55.00
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<div class="usage-info">
+										<div class="usage-info__title">Payment Method Used</div>
+										<div class="usage-info__value">
+											<img src="" alt="">
+											<span class="usage-info__number">XXXX XXXX XXXX 3974</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-8">
+							<div class="card card-auto-recharge">
+								<div class="card-header">
+									<div class="card-title">Auto Recharge</div>
+								</div>
+								<div class="card-body">
+									<div class="charges-block">
+										<div class="charges-block__title">When My Balance is</div>
+										<div class="charges-block__value">
+											<span class="ex-icon-angleleft"></span>
+											<span class="label-currency">$</span> 25.00
+										</div>
+										<div class="auto-recharge-box">
+											<div class="auto-recharge-box__label">Auto Recharge</div>
+											<div class="auto-recharge-box__value"> 
+												<span class="label-currency">$</span>200</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<div class="usage-info">
+										<div class="usage-info__title">Payment Method Used</div>
+										<div class="usage-info__value">
+											<img src="" alt="">
+											<span class="usage-info__number">XXXX XXXX XXXX 3974</span>
+										</div>
+									</div>
+									<button class="btn" data-toggle="modal" data-target="#magaeAutorecharge">Manage Autorecharge</button>
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- end: row 1 -->
+
+					<!-- Row2 -->
+					<div class="row">
+						<div class="col-md-20 payment-locations">
+							<div class="card">
+								<div class="card-header clearfix">
+									<div class="card-title">Payment Locations</div>
+									<div class="payment-location-map filter-checkbox">
+										<div class="btn-check filter-checkbox__box">
+									      	<label>
+									      		<input type="checkbox" name="check">
+									      		<span class="label-text">Disconnect</span>
+									      	</label>	
+									    </div>
+									    <div class="btn-check filter-checkbox__box">
+									      	<label>
+									      		<input type="checkbox" name="check">
+									      		<span class="label-text">Disconnect</span>
+									      	</label>	
+									    </div>
+									    <div class="btn-check filter-checkbox__box">
+									      	<label>
+									      		<input type="checkbox" name="check">
+									      		<span class="label-text">Disconnect</span>
+									      	</label>	
+									    </div>
+									    <div class="btn-check filter-checkbox__box">
+									      	<label>
+									      		<input type="checkbox" name="check">
+									      		<span class="label-text">Disconnect</span>
+									      	</label>	
+									    </div>
+									</div>
+								</div>
+								<div class="card-body">
+
+									<div class="retail-payment">
+										<div class="pay-by-cash col-md-10">
+											<div class="pay-by-cash__heading">Want to pay by Cash?</div>
+											<p class="pay-by-cash__info">You can also reacharge your account/pay your bill using cash</p>
+
+											<ul class="pay-by-cash__list list-inline">
+												<li class="pay-by-cash__items">
+													<i class="ex-icon-kiosks"></i>
+													<!-- <img src="images/pay-by-cash-icon1.png" alt="pay-by-cash icon"  class="pay-by-cash__icon"> -->
+													<div class="pay-by-cash__deatil">Kiosks</div>
+												</li>
+												<li class="pay-by-cash__items">
+													<i class="ex-icon-utilityoffice"></i>
+													<!-- <img src="images/pay-by-cash-icon2.png" alt="pay-by-cash icon"  class="pay-by-cash__icon"> -->
+													<div class="pay-by-cash__deatil">Utility Office</div>
+												</li>
+												<li class="pay-by-cash__items">
+													<i class="ex-icon-moneygram"></i>
+													<!-- <img src="images/pay-by-cash-icon3.png" alt="pay-by-cash icon"  class="pay-by-cash__icon"> -->
+													<div class="pay-by-cash__deatil">MoneyGram</div>
+												</li>
+											</ul>
+										</div>
+										<div class="pament-provider col-md-10">
+											<div class="pament-provider__heading">
+												Select Retail Payment Provider
+											</div>
+
+											<form action="#" class="pament-provider__form">
+												<div class="radio-box">
+											      	<label>
+												      	<input type="radio" name="check">
+												      	<span class="label-text">
+												      		<img src="images/payment-instore.png" alt="instore images">
+												      	</span>
+											      	</label>	
+											    </div>
+												<div class="radio-box">
+											      <label>
+											      	<input type="radio" name="check">
+											      	<span class="label-text">
+											      		<img src="images/payment-paynearme.png" alt="instore images">
+											      	</span>
+											      	</label>	
+											    </div>
+												<div class="radio-box">
+											      <label>
+											      	<input type="radio" name="check">
+											      	<span class="label-text"><img src="images/payment-paydesk.png" alt="instore images">
+											      	</span>
+											      	</label>	
+											    </div>
+											    <a href="#" class="btn btn-blue btn--retail-payment">Make Retail payment</a>
+													
+											</form>
+
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: row 2 -->
+
+					<!-- Row3 -->
+					<div class="row">
+						<div class="col-md-8">
+							<div class="card card-payment-notification">
+								<div class="card-header">
+									<div class="card-title">Recent Payments</div>
+								</div>
+								<div class="card-body scroll-y">
+									<div class="payment-notification">
+										<div class="payment-notification__left">
+											<div class="payment-notification__time">Today 3:28pm</div>
+											<div class="payment-notification__info">Paid from Joe's Credit Card</div>
+										</div>
+										<div class="payment-notification__right">
+											<span class="payment-notification__amount"> $ 197.45</span>
+										</div>
+									</div>
+
+									<div class="payment-notification">
+										<div class="payment-notification__left">
+											<div class="payment-notification__time">Today 3:28pm</div>
+											<div class="payment-notification__info">Paid from Joe's Credit Card</div>
+										</div>
+										<div class="payment-notification__right">
+											<span class="payment-notification__amount"> $ 197.45</span>
+										</div>
+									</div>
+
+									<div class="payment-notification">
+										<div class="payment-notification__left">
+											<div class="payment-notification__time">Today 3:28pm</div>
+											<div class="payment-notification__info">Paid from Joe's Credit Card</div>
+										</div>
+										<div class="payment-notification__right">
+											<span class="payment-notification__amount"> $ 197.45</span>
+										</div>
+									</div>
+
+								</div>
+								<div class="card-footer">
+									
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-8">
+							<div class="card">
+								<div class="custom-utility-tile">
+									<div class="custom-utility-tile__icon">
+										<i class="ex-icon-utilitysetting"></i>
+									</div>
+									<div class="custom-utility-tile__title">Custom Utility Tile</div>
+									<div class="custom-utility-tile__info">Some text which the utility chooses to have for the user to see.</div>
+									<div class="custom-utility-tile__edit">
+										<span class="fa fa-pencil"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end: row 3 -->
+				</div>
+				<!-- END: Dashboard Content -->
+
+			</div>
+			<!-- END: Dashboard Main -->
+
+
+			<!-- Dashboard Footer -->
+			<footer class="dashboard-footer" id="dashboard-footer">
+				<div class="row">
+					<div class="col-md-offset-5 col-md-4">
+						<ul class="footer-links">
+							<li class="footer-links__item"><a href="#">Terms &amp; Conditions</a></li>
+							<li class="footer-links__item"><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+					<div class="col-md-5">
+						<ul class="footer-login-info">
+							<li class="footer-login-info__item"><b>Debug mode activated</b></li>
+							<li class="footer-login-info__item">Login: chris@exceleron.com</li>
+							<li class="footer-login-info__item">PAMS version:v3.3-924-gcfe87e8-dity</li>
+						</ul>
+					</div>
+					<div class="col-md-5">
+						<ul class="footer-login-info">
+							<li class="footer-login-info__item">UTM</li>
+							<li class="footer-login-info__item">Hostname: pams3.aws.exceleron.com</li>
+							<li class="footer-login-info__item">Request Time: 377ms(exec), 402ms (total)</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="row">
+					<p class="copyright-text">
+						MyUsage.com@2017. All rights reserved.  9-10-2016 1:57:02 AM CDT
+					</p>
+				</div>
+
+			</footer>
+
+			
+
+			<!--make one time popup-->
+			<div class="modal fade create-option make-payment" id="onTimePayment" role="dialog">
+			    <div class="modal-dialog">
+			    
+			      <!-- Modal content-->
+			      <div class="modal-content">
+			        	<div class="modal-header make-payment__header">
+				          	<button type="button" class="close close--outer" data-dismiss="modal" aria-label="Close">
+				          		<span aria-hidden="true">×</span>
+				          	</button>
+				          	<h4 class="modal-title create-option__title">Make one time payment</h4>
+
+							<div class="service-type">
+				          		<h3 class="service-type__title">Payment method type</h3>
+					          	 <ul class="nav nav-tabs service-type-wraper">
+								    <li class="active  col-md-10 service-type__box">
+								    	<a data-toggle="tab" href="#creditCard" class="service-type__wrapper">
+											<img src="images/credit-card.png" alt="credit card img" class="service-type__icon">
+							      			<span class=" service-type__info">credit card</span>
+								    	</a>
+								    </li>
+								    <li class="col-md-10 service-type__box ">
+								    	<a data-toggle="tab" href="#bankAccount" class="service-type__wrapper">
+								    		<img src="images/bank-account.png" alt="bank images" class="service-type__icon">
+								      			<span class=" service-type__info">BANK ACCOUNT</span>
+								    	</a>
+								    </li>
+								  </ul>
+							</div>
+			        	</div>
+			         
+				        <div class="modal-body make-payment__body">
+							<!--form container-->
+							<div class="tab-content">
+							 	<!-- first tab-->
+								<div id="creditCard" class="tab-pane fade in active">
+									<form action="#" class="card-detail">
+										<div class="form-group clearfix">
+							          		<div class="form-field col-md-10">
+							          		    <label for="option name" class="form-label">CARD HOLDER NAME</label>
+							          			<input type="text" class="form-input form-input5">
+							          		</div>
+							          		<div class="form-field col-md-10">
+							          		    <label for="option name" class="form-label">CARD Number</label>
+							          			<input type="number" class="form-input form-input5">
+							          		</div>
+							          	</div>
+							          	<div class="form-group no-mar clearfix">
+							          		<div class="form-field col-md-10">
+							          		    <label for="option name" class="form-label">Expyry</label>
+							          			<input type="date" class="form-input form-input5">
+							          		</div>
+							          		<div class="form-field col-md-5">
+							          		    <label for="option name" class="form-label">CVV</label>
+							          			<input type="Number" class="form-input form-input6">
+							          		</div>
+							          		<div class="form-field col-md-5">
+							          		    <label for="option name" class="form-label">Card Type</label>
+							          			<div class="form-input form-input6 form-input--card-type">
+							          				<img src="images/card-type.png" alt="card ype">
+							          			</div>
+							          		</div>
+							          	</div>
+									</form>
+									<!--/card details-->
+
+									<form action="#" class="payment-form">
+							          	<div class="form-group payment-form-wrapper clearfix">
+							          		<div class="form-group  col-md-10">
+							          		    <label for="option name" class="form-label">Address Line-1</label>
+							          			<input type="text" class="form-input">
+							          		</div>
+							          		<div class="form-group col-md-10">
+							          		    <label for="option name" class="form-label">Address Line-2</label>
+							          			<input type="text" class="form-input ">
+							          		</div>
+											
+							          		<div class=" form-group select col-md-10">
+												<label for="account nuber" class="form-label">Town / City</label>
+												<select name="account-number" class="selectpicker form-input " title="Tantulus">
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+												</select>
+											</div>
+
+
+							          		<div class=" form-group select col-md-10">
+												<label for="account nuber" class="form-label">State/Territory</label>
+												<select name="account-number" class="selectpicker form-input " title="Tantulus">
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+												</select>
+											</div>
+										
+							          		<div class="form-field col-md-10">
+							          		    <label for="option name" class="form-label">Postal Code</label>
+							          			<input type="number" class="form-input ">
+							          		</div>
+							          	</div>
+						          	</form>
+						          	<!--/address form-->
+
+							    </div>
+							    <!-- /first tab-->
+
+							    <!-- second tab-->
+							    <div id="bankAccount" class="tab-pane fade">
+							     	<form action="#" class="payment-form payment-form--bank">
+							          	<div class="form-group payment-form-wrapper clearfix">
+							          		<div class="form-group  col-md-10">
+							          		    <label for="option name" class="form-label">Account Number</label>
+							          			<input type="text" class="form-input">
+							          		</div>
+							          		<div class="form-group col-md-10">
+							          		    <label for="option name" class="form-label">Bank Name</label>
+							          			<input type="text" class="form-input ">
+							          		</div>
+											
+							          		<div class=" form-group select col-md-10">
+												<label for="account nuber" class="form-label">Account Type</label>
+												<select name="account-number" class="selectpicker form-input " title="Account Type">
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+												</select>
+											</div>
+
+							          		<div class=" form-group select col-md-10">
+												<label for="account nuber" class="form-label">State/Territory</label>
+												<select name="account-number" class="selectpicker form-input " title="Tantulus">
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+												</select>
+											</div>
+										
+							          		<div class="form-field col-md-10">
+							          		    <label for="option name" class="form-label">IFSC Code</label>
+							          			<input type="number" class="form-input ">
+							          		</div>
+							          	</div>
+						          	</form>
+						          	<!--/address form-->
+							    </div>
+							    <!-- /second tab-->
+							</div>
+							
+				        </div>					
+				        <div class="modal-footer make-payment__footer ">
+				        	<div class="btn-check no-padd">
+						     	<label>
+						      		<input type="checkbox" name="check">
+						      		<div class="label-text">
+						      			<div class="label-text-wraper">
+								      		<span>Save this card for future payments</span>
+											<span class="label-text--inner">Uncheck if you want to make one time payment</span>
+							      		</div>
+						      		</div>
+						      	</label>	
+							</div>
+				         	<button type="button" class="btn btn--blue">SAVE CHANGES</button>
+				        </div>
+
+			      	</div>
+			       	<!-- Modal content-->
+			       	
+			 	</div>
+				<!--/create option popup-->
+			</div>
+			<!--/make one time popup-->
+
+			<!--add payment methods-->
+			<div class="modal fade create-option make-payment" id="addPaymentMethod" role="dialog">
+			    <div class="modal-dialog">
+			    
+			      <!-- Modal content-->
+			      <div class="modal-content create-option__content">
+			        	<div class="modal-header create-option__header make-payment__header">
+				          	<button type="button" class="close create-option__close" data-dismiss="modal">&times;</button>
+				          	<h4 class="modal-title create-option__title">Add Payment Method</h4>
+
+				         	<div class="service-type clearfix">
+				          		<h3 class="service-type__title">Payment method type</h3>
+
+					          	<div class="service-type-wraper ">
+					          		<div class=" service-type__box col-md-10">
+								      	<label>
+								      		<input type="radio" name="check">
+								      		<div class="label-text">
+								      			<!-- <i class="fa fa-lightbulb-o  " aria-hidden="true"></i> -->
+								      			<img src="images/credit-card.png" alt="credit card img" class="service-type__icon">
+								      			<span class=" service-type__info">credit card</span>
+								      		</div>
+								     	 </label>	
+					          		</div>
+					          		<div class=" service-type__box col-md-10">
+								      	<label>
+								      		<input type="radio" name="check">
+								      		<div class="label-text">
+								      			<img src="images/bank-account.png" alt="bank images" class="service-type__icon">
+								      			<span class=" service-type__info">BANK ACCOUNT</span>
+								      		</div>
+								     	 </label>	
+					          		</div>
+					          	</div>
+				        	</div>
+			         	</div>
+
+				        <div class="modal-body make-payment__body">
+							
+							<!--card details-->
+							<form action="#" class="card-detail">
+								<div class="form-group clearfix">
+					          		<div class="form-field col-md-10">
+					          		    <label for="option name" class="form-label">CARD HOLDER NAME</label>
+					          			<input type="text" class="form-input form-input5">
+					          		</div>
+					          		<div class="form-field col-md-10">
+					          		    <label for="option name" class="form-label">CARD Number</label>
+					          			<input type="number" class="form-input form-input5">
+					          		</div>
+					          	</div>
+					          	<div class="form-group no-mar clearfix">
+					          		<div class="form-field col-md-10">
+					          		    <label for="option name" class="form-label">Expyry</label>
+					          			<input type="date" class="form-input form-input5">
+					          		</div>
+					          		<div class="form-field col-md-5">
+					          		    <label for="option name" class="form-label">CVV</label>
+					          			<input type="Number" class="form-input form-input6">
+					          		</div>
+					          		<div class="form-field col-md-5">
+					          		    <label for="option name" class="form-label">Card Type</label>
+					          			<div class="form-input form-input6 form-input--card-type">
+					          				<img src="images/card-type.png" alt="card ype">
+					          			</div>
+					          		</div>
+					          	</div>
+							</form>
+							<!--/card details-->
+
+							<!--address form-->
+				          	<form action="#" class="payment-form">
+					          	<div class="form-group ">
+					          		<div class="form-field">
+					          		    <label for="option name" class="form-label">Address Line-1</label>
+					          			<input type="text" class="form-input form-input4">
+					          		</div>
+					          		<div class="form-field">
+					          		    <label for="option name" class="form-label">Address Line-2</label>
+					          			<input type="text" class="form-input form-input4">
+					          		</div>
+					          		<div class="form-field">
+					          		    <label for="option name" class="form-label">Town / City</label>
+										<select name="city" class="form-input form-input4">
+											<option value="" disabled="" selected="" hidden="">select</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+					          		</div>
+					          		<div class="form-field">
+					          		    <label for="option name" class="form-label">State/Territory</label>
+					          			<select name="city" class="form-input form-input4">
+											<option value="" disabled="" selected="" hidden="">select</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+					          		</div>
+					          		<div class="form-field">
+					          		    <label for="option name" class="form-label">Postal Code</label>
+					          			<input type="number" class="form-input form-input4">
+					          		</div>
+					          	</div>
+				          	</form>
+				          	<!--/address form-->
+				        </div>
+
+				        <div class="modal-footer create-option__footer make-payment__footer make-payment__footer1 filter-checkbox ">
+				         	<a href="#" class="bttn-default btn-create-options col-md-5">Save Details</a>
+				        </div>
+
+			      	</div>
+			       	<!-- Modal content-->
+			       	
+			 	</div>
+				<!--/create option popup-->
+			</div>
+			<!--/add payment methods-->
+
+
+			<!--manage payment methods-->
+			<div class="modal fade create-option manage-payment" id="managePaymentMethod" role="dialog">
+			    <div class="modal-dialog">
+			    
+			      	<!-- Modal content-->
+			      	<div class="modal-content">
+			        	<div class="modal-header ">
+				          	<button type="button" class="close close--outer" data-dismiss="modal" aria-label="Close">
+				          		<span aria-hidden="true">×</span>
+				          	</button>
+
+				          	<h4 class="modal-title create-option__title">Manage Payment Method</h4>
+			         	</div>
+
+				        <div class="modal-body">
+
+							<div class="payment-methods">
+								<div class="payment-wrapper clearfix">
+									<div class="payments-heading">CARDS (2) </div>
+									<a href="#" class="btn btn--blue"> ADD A CARD</a>	
+								</div>
+
+								<div class="card-details">
+									<div class="payment">
+										<div class="payment__method">Payment method used</div>
+										<div class="payment__code">xxxx xxxx xxxx 3974</div>
+						       		 </div>
+						       		 <div class="remove-link">Remove</div>						       
+								</div>
+								<div class="card-details">
+									<div class="payment">
+										<div class="payment__method">Payment method used</div>
+										<div class="payment__code">xxxx xxxx xxxx 3974</div>
+						       		 </div>
+						       		 <div class="remove-link">Remove</div>						       
+								</div>
+							</div>
+
+							<div class="payment-methods">
+								<div class="payment-wrapper clearfix">
+									<div class="payments-heading payments-heading--acount">BANK ACCOUNT (2)  </div>
+									<a href="#" class="btn btn--blue"> ADD An Account </a>	
+								</div>
+
+								<div class="card-details">
+									<div class="bank-info">
+										<div class="bank-info__image-wraper">
+											<img src="./images/jp-morgan.png" class="bank-info__image">
+										</div>
+										<div class="bank-info__content-wraper">
+											<div class="bank-info__bank-name">JP Morgan Chase</div>
+											<div class="bank-info__bank-number">3976479369235</div>
+										</div>
+									</div>
+						       		 <div class="remove-link">Remove</div>						       
+								</div>
+								<div class="card-details">
+									<div class="bank-info">
+										<div class="bank-info__image-wraper">
+											<img src="./images/jp-morgan.png" class="bank-info__image">
+										</div>
+										<div class="bank-info__content-wraper">
+											<div class="bank-info__bank-name">JP Morgan Chase</div>
+											<div class="bank-info__bank-number">3976479369235</div>
+										</div>
+									</div>
+						       		<div class="remove-link">Remove</div>						       
+								</div>
+							</div>
+
+				        </div>
+
+				        <div class="modal-footer ">
+				         	<button type="button" class="btn btn--blue">SAVE CHANGES</button>
+				        </div>
+
+			      	</div>
+			       	<!-- Modal content-->
+			       	
+			 	</div>
+				<!--/create option popup-->
+			</div>
+			<!--/manage payment methods-->
+
+
+			<!--/manage auto  recharge-->
+			<div class="modal fade create-option make-payment" id="magaeAutorecharge" role="dialog">
+			    <div class="modal-dialog modal-lg">
+			    
+			      	<!-- Modal content-->
+			      	<div class="modal-content create-option__content">
+			        	<div class="modal-header payment-methods-header">
+				          <button type="button" class="close close--outer" data-dismiss="modal" aria-label="Close">
+				          		<span aria-hidden="true">×</span>
+				          	</button>
+				          	<h4 class="modal-title create-option__title">Manage Auto Recharge</h4>
+			         	</div>
+						
+						<!--recharge details-->
+						<div class="recharge-details">
+							<div class="section-sub-heading">Terms and Conditions</div>
+							<form action="#" class="recharge-form form-recharge-account">
+
+								<div class="form-group-filed">
+									<div class="form-field-name">Pay $</div>
+									<div class="form-group">
+										<label for="account nuber" class="form-label">Recharge</label>
+										<input type="number" class="form-input form-input-recharge ">
+									</div>
+								</div>
+								<div class="form-group-filed">
+									<div class="form-field-name">When my balance is <span class="less-than"><</span> $</div>
+									<div class="form-group">
+										<label for="account nuber" class="form-label">Balance Threshold</label>
+										<input type="number" class="form-input form-input-recharge ">
+									</div>
+								</div>
+								<div class="form-group-filed ">
+									<div class="form-field-name">From</div>
+									<div class="form-group form-group-recharge">
+										<label for="account nuber" class="form-label">Choose Card</label>
+										<select id="basic" class="selectpicker payment-selectpicker form-input-recharge1" title="Select payment Method">
+									        <option data-content="<div class='bank-info'>
+													<div class='bank-info__image-wraper'>
+														<img src='./images/credit-card.png'class='bank-info__image'>
+													</div>
+													<div class='bank-info__content-wraper'>
+														<div class='bank-info__bank-name'>Chris’s AMEX Card</div>
+														<div class='bank-info__bank-number'>xxxx xxxx xxxx 3974</div>
+													</div>
+												</div>"> 
+									        </option>
+									         <option class="option2" data-content="<div class='bank-info'>
+													<div class='bank-info__image-wraper'>
+														<img src='./images/credit-card.png'class='bank-info__image'>
+													</div>
+													<div class='bank-info__content-wraper'>
+														<div class='bank-info__bank-name'>Mastrio’s AMEX Card</div>
+														<div class='bank-info__bank-number'>xxxx xxxx xxxx 3974</div>
+													</div>
+												</div>"> 
+									        </option> 		
+									    </select>
+									</div>
+								</div>	
+								
+							</form>	
+						</div>
+						<!--/rcharge details-->
+
+						<!--terms and conditions-->
+				       	<div class="modal-body  payment-methods-body">
+				       		<div class="section-sub-heading">Terms and Conditions</div>
+				       		<ol class="recharge-terms-conditions">
+				       			<li class="recharge-terms-conditions-list"l>
+				       				This privacy policy (“Policy”) covers the collection, use and dissemination of personally identifiable information (“Personal Information”) by MyUsage (also referred to as “we,” “our,” “us”).
+				       			</li>
+				       			<li class="recharge-terms-conditions-list"> 
+				       				We provide this website (“Site”) as a way for you to learn more about our company, our products and thYeOUservices we provide.
+				       			</li>
+				       			<li class="recharge-terms-conditions-list">
+				       				Pe rsonal Information voluntarily provided by you may be retained indefinitely for the purposes described in this Policy.
+				       			</li>
+				       		</ol>
+				       	</div>
+				       	<!--/terms and conditions-->
+
+				        <div class="modal-footer">
+				        	<div class="btn-check  text-block">
+						     	<label>
+						      		<input type="checkbox" name="check">
+						      		<div class="label-text">
+						      			I accept all the terms and conditions and privacy policy
+						      		</div>
+						      	</label>	
+							</div>
+				         	<button type="button" class="btn btn--blue ">SAVE CHANGES</button>
+				        </div>
+
+			      	</div>
+			       	<!-- Modal content-->
+			       	
+			 	</div>
+				<!--/create option popup-->
+			</div>
+			<!--/manage auto  recharge-->
+
+
+
+
+
+		</div>
+		<!-- END Main Container -->
+	</main>
+
+
+
+	<script>
+		require(['config'], function(){
+			// require(['bootstrapSelectPicker']);
+			require(['modernizr', 'bootstrap','customScrollbar', 'bootstrapSelectPicker', 'addCardPopup', 'footerDashboard','placeholderInput']);
+		});
+	</script>
+</body>
+</html>

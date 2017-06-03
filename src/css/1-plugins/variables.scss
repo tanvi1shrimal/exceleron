@@ -1,0 +1,103 @@
+// =Colors - Primary
+$ex-pri-blue: #2dc4cb;
+$ex-pri-red: #e4002b;
+$ex-pri-green: #2fcb3a;
+$ex-pri-dark-blue:#142d37;
+
+// =Colors - Secondary
+$ex-sec-yellow: #ff9800;
+$ex-sec-blue: #364b8e;
+$ex-sec-green: #4ebd65;
+$ex-sec-navy: #263248;
+$ex-sec-orange: #ff9900;
+
+$ex-navy: #27364d;
+
+// =Colors - Gray
+$ex-gray-darker: #333;
+$ex-gray-moredarker: #999;
+$ex-gray-dark: #696f7d;
+$ex-gray-med: #9fa3a6;
+$ex-gray-light: #cacbcd;
+$ex-gray-lighter: #f4f6f8;
+
+$ex-bg-blue:#effbfb;
+
+//grey color varients
+$white : #ffffff;
+$black : #000000;
+
+$grey: #cccccc;
+$grey-border: #ecedee;
+$ex-gray-darker-bg: #f8f9fa;
+$bg-skyGrey: #f4f6f8;
+$bg-light-blue: #f4fcfc;
+
+
+$text-pri-blue: #2dc4cb;
+$text-pri-red: #ee183b;
+$ex-table-gray-border: #eaeaea;
+$ex-table-gray-lighter: #eeeeee;
+$ex-table-gray-light: #dedede;
+$ex-table-gray-med: #cdcdcd;
+$ex-table-gray-dark: #bdbdbd;
+$ex-table-gray-arrow: #a1a9b0;
+
+
+// =Font Families
+$oswald-r: 'Oswald-Regular', sans-serif;
+$oswald-b: 'Oswald-Bold', sans-serif;
+$oswald-l: 'Oswald-Light', sans-serif;
+
+$pt-sans-r: 'PTSans-Regular', sans-serif;
+$pt-sans-b: 'PTSans-Bold', sans-serif;
+
+@mixin font($family, $size: null, $line-height: null) {
+	font-family: $family;
+	font-size: $size;
+	line-height: $line-height;
+}
+
+@mixin flex-box($justify-content, $align-items) {
+	display:flex;
+	justify-content:$justify-content;
+	align-items:$align-items;
+}
+
+
+@mixin border(){
+	position:relative;
+	&::after{
+		position:absolute;
+		bottom:0;
+		left:0;
+		content: "";
+		width:calc(100% + 15px);
+		height: 1px;
+		background:$grey-border;
+	}
+}
+
+
+// Text colors
+
+
+.ex-color-red,
+.ex-color-red * {
+	color: $ex-pri-red!important;
+}
+
+.ex-color-green,
+.ex-color-green * {
+	color: $ex-pri-green!important;	
+}
+
+.ex-color-blue,
+.ex-color-blue * {
+	color: $ex-pri-blue!important;
+}
+
+.ex-color-orange,
+.ex-color-orange * {
+	color: $ex-sec-orange!important;
+}

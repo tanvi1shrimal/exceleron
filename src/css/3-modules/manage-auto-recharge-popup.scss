@@ -1,0 +1,127 @@
+
+.auto-rechrge__footer {
+
+	.filter-mapping__box {
+		text-align:left;
+	}
+	.bttn-default {
+		text-align: center;
+	}
+
+	.label-text-wraper {
+		margin-left:0;
+	}
+}
+
+
+//terms and conditions
+.section-sub-heading{
+	@include font($oswald-b, $size: 12px, $line-height: 22px);
+	color:$ex-gray-darker;
+	text-transform:uppercase;
+	padding-bottom:15px;
+}
+
+.recharge-terms-conditions {
+	padding-left:15px;
+	margin-bottom:0;
+}
+
+.recharge-terms-conditions-list{
+	@include font($pt-sans-r, $size: 14px, $line-height: 24px);
+	color:$ex-gray-dark;
+	padding-bottom:10px;
+
+	&:last-of-type {
+		padding-bottom:0;
+	}
+}
+
+//recharge details
+.recharge-details {
+	padding:25px;
+	margin: 0 25px 10px 25px;
+	background:$bg-skyGrey;
+
+	.section-sub-heading {
+		font-size:14px;
+	}
+}
+
+.form-field-name{
+	@include font($oswald-r, $size: 12px, $line-height: 22px);
+	color:$ex-gray-darker;
+	text-transform:uppercase;
+	padding-right:10px;
+	margin-top:25px;
+}
+
+.form-group-filed {
+	// @include flex-box(null, center);
+	display:table-cell;
+	padding-left:20px;
+
+	&:first-of-type {
+		padding-left:0;
+	}
+}
+
+.recharge-form{
+
+	display: table;
+
+	.form-group{
+		margin-bottom: 0;
+		display: inline-block;
+	}
+
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+	  -webkit-appearance: none; 
+	  margin: 0; 
+	}
+
+	.bank-info__bank-number {
+		font-size: 10px;
+		color:$ex-gray-med;
+	}
+	.bank-info__bank-name {
+		padding-bottom:2px;
+		color:$ex-gray-darker
+	}
+
+	.form-field-name{
+		display: inline-block;
+	}
+}
+
+.recharge-form.form-recharge-account .bootstrap-select.btn-group .dropdown-menu li {
+	margin:10px 0;
+}
+.recharge-form.form-recharge-account .dropdown-toggle {
+	padding: 0 20px;
+}
+
+
+.form-input-recharge {
+	width:140px;
+	height:50px;
+}
+
+
+.form-group-recharge {
+	width:260px;
+
+	.dropdown-toggle {
+		min-height: 50px;
+	}
+}
+.less-than {
+	font-size:20px;
+	color:#fe2211;
+}
+
+.recharge-form.form-recharge-account .dropdown-toggle {
+    border: 1px solid #ccc;
+    background:$white;
+}

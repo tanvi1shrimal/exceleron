@@ -1,0 +1,371 @@
+
+//Filter-label
+.filter {
+	// font-size:20px;
+	float:right;
+	cursor:pointer;
+	padding:10px 10px 5px;
+	background:$text-pri-blue;
+	position:absolute;
+	right:0;
+
+	&__info {
+		color: $white;
+		font-family: 'Oswald-Regular';
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+
+		.ex-icon-filter{ 
+			font-size:22px;
+			width: 20px;
+			margin-right: 5px;
+			vertical-align: middle;
+			position: relative;
+			top: -2px;
+		}
+	}
+
+	&__notification {
+		position:absolute;
+		left:12px;
+		top:-6px;
+		width: 22px;
+		height: 22px;
+		transform: translate(-100%);
+		background:$text-pri-red;
+		border-radius:50%;
+		color:$white;
+		text-align: center;
+		padding-top:2px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+	}
+}
+
+//Filter Content
+.data-filters {
+	position:absolute;
+	right:0;
+	top:0;
+	width:280px;
+	background:$white;
+	opacity:0;
+	z-index: 10;
+	transform:translate3d(100%, 0, 0);
+	transition:transform .7s cubic-bezier(.65,.22,0,.98), opacity .7s linear;
+}
+.show-data {
+	opacity:1;
+	transform:translate3d(0, 0, 0);
+}
+
+.transaction-history-table {
+	height: 700px;
+	position:relative;
+	background:$white;
+	overflow:hidden;
+	padding: 15px 0;
+}
+
+//filter-header
+.filter-header {
+	background:$black;
+	color: $white;
+	font-family: 'Oswald-Regular';
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding:10px 15px;
+	&__heading {
+		display: inline-block;
+    	padding: 0px 9px 0 2px;
+	}
+	
+	&__close {
+		float:right;
+		margin-top: 1px;
+		cursor: pointer;
+	}
+
+	&__icon {
+		font-size: 20px;
+		vertical-align: sub;
+	}
+	&__close {
+		font-size: 16px;
+	}
+
+	&__count {
+		opacity: 0.5;
+	}
+}
+
+
+
+//filter sort
+.filter-sort {
+	padding: 20px 15px;
+
+	input[type="radio"] + .label-text {
+		color: #27354d;
+	    font-family: 'PTSans-Regular';
+	    font-size: 12px;
+	    font-weight: bold;
+	    text-transform: uppercase;
+	    // opacity: 0.5;
+	    color:$ex-gray-light;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    position:relative;
+	    transition: all 0.4s ease;
+	    cursor: pointer;
+
+			&:before {
+				position:absolute;
+				left:0;
+				top:-1px;
+				height:2px;
+				width:100%;
+				content: "";
+				background:$text-pri-blue;
+				transform: scale(0);
+				transition: all 0.4s ease;
+			}
+
+	}
+
+	 input[type="radio"] {	
+		display: none;
+		&:checked + .label-text{
+			color:$text-pri-blue;
+			&:before {
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+.radio-inline {
+	padding-left:0;
+	margin-right: 21px;
+
+	&:last-of-type{
+		margin-right: 0;
+	}
+
+	label {
+		margin-bottom: 0;
+	}
+}
+
+.radio-wraper {
+	padding-top: 10px;
+    padding-left: 2px;
+}
+
+
+.panel-filter{
+	// border-top:1px solid #ccc;
+	&__title {
+		margin: 0;
+		font-size: 14px;
+		font-family: 'Oswald-Light', sans-serif;
+		text-transform: uppercase;
+		font-weight: bold;
+		
+		> a {
+			color:$ex-gray-darker;
+			display: block;
+			&::after {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(0, -50%) rotate(0);
+				content: "\e927";
+		  		font-family: 'exceleron';
+		  		font-size: 12px;
+		  		transition: all 0.6s ease;
+			}
+
+			.fa {
+				margin-right: 10px;
+			}
+
+			&[aria-expanded="true"]::after {
+				// content: "\f107";
+				transform: translate(0, -50%) rotate(-90deg);
+			}
+		}
+	}
+
+	&__count {
+	    float: right;
+	    margin-right: 25px;
+	    font-size: 8px;
+	    display: inline-block;
+	    background: #cad0d3;
+	    color:$white;
+	    border-radius: 50%;
+        width: 19px;
+	    height: 19px;
+	    opacity: 0;
+	    transform: scale(0.8);
+	    transition: all 0.4s ease;
+	    text-align: center;
+    	padding-top: 6px;
+	}
+
+	.panel-heading {
+		border-top: 1px solid $ex-gray-light;
+		padding: 15px 20px 15px 15px;
+	}
+	.actives {
+		background:$ex-gray-darker-bg;
+		border: none;
+	}
+
+}
+
+.show-count {
+	opacity:1;
+	transform: scale(1);
+	transition: all 0.4s ease;
+	margin-right:25px !important;
+	font-size: 8px !important;
+}
+//filter  checkbox
+.filter-checkbox {
+	padding: 20px 15px;
+}
+
+.filter-label {
+	color: #969aa3;
+	font-family: 'Oswald-Light';
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-bottom:15px;
+}
+
+//checkbox and radio buttons
+
+.filter-checkbox {
+	
+	&__heading {
+		padding-bottom:5px;
+	}
+	&__box {
+		display: inline-block;
+		margin-bottom:15px;
+		&:last-of-type {
+			margin-bottom:0;
+		}
+	}
+
+	.radio label, .checkbox label {
+		padding-left:0;
+	}
+
+	// input[type="checkbox"] + .label-text:before{
+	// // input[type="radio"] + .label-text:before {
+
+	// 	font-family: "fontAwesome";
+	// 	font-style: normal;
+	// 	font-variant: normal;
+	// 	font-weight: normal;
+	// 	text-transform: normal;
+	// 	line-height: 1;
+	// 	margin-right: 5px;
+	//     width: 20px;
+	//     font-size: 19px;
+	//     display: inline-block;
+	// }
+
+	// .label-text {
+	// 	color: #27354d;
+	//     font-family: 'PTSans-Regular';
+	//     font-size: 12px;
+	//     font-weight: bold;
+	//     text-transform: uppercase;
+	//     color: $ex-gray-light;
+	//     display: flex;
+	//     justify-content: center;
+	//     align-items: center;
+	//     transition: all 0.3s ease;
+	// 	}
+
+	// input[type="checkbox"] {	
+	// 	display: none;
+		
+	// 	& + .label-text:before{
+
+	// 		content:"\f096";
+	// 		transition: all 0.5s ease;
+			
+	// 	}
+
+	// 	&:checked + .label-text:before {
+	// 		content: "\f14a";
+	// 		color:#33cccc;
+			
+	// 	}
+	// 	&:checked + .label-text {
+	// 		color:$ex-gray-darker;
+	// 	}
+	// }
+
+
+}
+
+
+.filter-buttons {
+	padding:23px 20px;
+	border-top:1px solid $ex-gray-light;
+
+	.button-default{
+		&:focus{
+			border: 2px solid #2dc4cb;
+		}
+	}
+}
+
+.button-default {
+	font-family: 'Oswald-Bold';
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: $text-pri-blue;
+    padding: 13px 70px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 0;
+    color:$white;
+
+    &:hover {
+    	color:$white;
+    }
+    &:focus, &:active {
+    	box-shadow:none;
+    	outline: none !important;
+    	border:1px solid transparent;
+    	color:$white;
+    }
+}
+
+.cta-link {
+	display:inline-block;
+	color: $ex-gray-darker;
+	font-family: 'PTSans-Regular';
+	font-size: 12px;
+	font-weight: 400;
+	text-decoration: underline;
+	text-transform: uppercase;
+	text-align:center;
+	width:100%;
+	padding-top:20px;
+}
+

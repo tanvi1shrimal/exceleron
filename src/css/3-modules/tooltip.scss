@@ -1,0 +1,83 @@
+.ex-tooltip {
+	display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    &:hover {
+		z-index: 1;
+    }
+
+	&:hover .ex-tooltip__content {
+		opacity: 1;
+	    pointer-events: auto;
+	    visibility: visible;
+	}
+
+	&__content {
+		width: 270px;
+		position: fixed;
+	    padding-top:20px;
+	    visibility: hidden;
+	    opacity: 0;
+	    pointer-events: none;
+
+	    transition: opacity .25s ease;
+
+	    &::before {
+			position: absolute;
+			content: "";
+			top: 10px;
+			right: 20px;
+			width: 20px;
+			height: 20px;
+			background: #fff;
+			transform: rotate(45deg);
+			box-shadow: -5px -5px 10px -5px rgba(0,0,0,0.2);
+	    }
+	}
+
+	&__icon {
+		display: inline-block;
+		color: $ex-gray-light;
+		text-align: center;
+		cursor: pointer;
+
+		width: 20px;
+		height: 20px;
+
+	}
+
+	&__info {
+		background: $white;
+	    padding: 20px;
+	    box-shadow: 0 2px 12px 1px rgba(0,0,0,0.15);
+		
+		p {
+			@include font($pt-sans-r, 12px, 17px);
+		}
+	}
+
+
+	.btn {
+		font-size: 10px;
+		margin-top: 12px;
+	}
+
+}
+
+.ex-tooltip__content {
+	z-index: 1;
+}
+
+.alert__info,
+.ex-tooltip__icon {
+	z-index: 0;
+}
+
+.alert .ex-tooltip {
+	position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -10px;
+}

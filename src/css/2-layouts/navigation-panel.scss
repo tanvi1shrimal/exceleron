@@ -1,0 +1,245 @@
+.main-container {
+	position: relative;
+	background: #e9ebed;
+	width: 1200px;
+	margin: 0px auto 0px 0px;
+
+	@media(min-width: 1600px) {
+		width: 1600px;
+	}
+}
+
+.navigation-panel {
+	background: #142b35;
+	background: linear-gradient(to left, #12232d, #10252d);
+	width: 200px;
+	float: left;
+	min-height: 100vh;
+
+	@media(min-width: 1600px) {
+		width: 305px;
+	}
+}
+
+
+.brand-logo {
+	padding: 15px 15px 20px;
+	display: inline-block;
+
+	&__img {
+		// display: inline-block;
+	}
+}
+
+.user-acc-info {
+	padding: 25px 14px;
+	border-bottom: 1px solid #2b424b;
+	background:#17333c;
+	background: linear-gradient(to right, #152833, #152f38);
+
+	@media(min-width: 1600px) {
+		padding: 25px 25px;
+	}
+
+	&__name {
+		@include font($oswald-r, 12px);
+		color: $ex-gray-med;
+		text-transform: uppercase;
+		margin-bottom: 12px;
+
+		@media(min-width: 1600px) {
+			font-size: 16px;
+		}
+	}
+
+	&__number {
+		@include font($pt-sans-r, 12px);
+		color: $ex-gray-med;
+		margin-bottom: 20px;
+
+		@media(min-width: 1600px) {
+			font-size: 16px;
+		}
+	}
+
+	&__address {
+		@include font($pt-sans-r, 12px);
+		color: $ex-gray-med;
+		margin-bottom: 25px;
+
+		@media(min-width: 1600px) {
+			font-size: 14px;
+		}
+
+	}
+
+}
+
+.acc-status {
+	padding: 13px 15px;
+	background: rgba(0,0,0,0.4);
+	border-radius: 22px;
+
+	display: flex;
+	justify-content: space-between;
+
+	&__label {
+		display: inline-block;
+		@include font($pt-sans-r, 12px);
+		color: $ex-gray-med;
+
+		@media(min-width: 1600px) {
+			font-size: 14px;
+		}	
+	}
+
+	&__info,
+	&__inactive {
+		display: inline-block;
+		@include font($oswald-r, 12px);
+		text-transform: uppercase;
+
+		@media(min-width: 1600px) {
+			font-size: 14px;
+		}
+	}
+
+	&__active {
+		color: $ex-sec-green;
+	}
+
+	&__inactive {
+		color: $ex-pri-red;
+	}
+}
+
+.panel-title {
+	> a {
+		display: flex;
+    	align-items: center;
+		position: relative;
+		text-decoration: none;
+		color: $ex-gray-dark;
+		transition: all .25s ease;
+
+		&:hover,
+		&[aria-expanded="true"] {
+			color: $ex-pri-blue;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+		> span {
+			font-size: 20px;
+			margin-right: 12px;
+		}
+	}
+}
+
+.list-group {
+	list-style: none;
+	margin-left: 50px;
+
+	@media(min-width: 1600px) {
+		margin-left: 60px;
+	}
+
+	li {
+		@include font($pt-sans-r, 12px);
+		color: $ex-gray-dark;
+		padding: 12px 0px;
+		border-bottom: 1px dashed #2b424b;
+
+		@media(min-width: 1600px) {
+			font-size: 14px;
+		}
+		a {
+			color: inherit;
+			transition: all .25s ease;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&:hover,
+		&.active {
+			color: $ex-pri-blue;
+		}
+
+		&:last-child {
+			border-bottom: 0px;
+		}
+	}
+}
+
+.panel-navigation {
+	border-bottom: 1px solid #2b424b;
+}
+.panel-heading {
+	padding: 15px 20px 15px 15px;
+	@media(min-width: 1600px) {
+		padding: 20px 20px 20px 25px;
+	}
+}
+
+
+.panel-navigation{
+	&__title {
+		margin: 0;
+		@include font($oswald-r, 12px);
+		text-transform: uppercase;
+
+		@media(min-width: 1600px) {
+			font-size: 14px;
+		}
+
+		> a {
+			&::after {
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(0, -50%);
+				content: "\e924";
+		  		font-family: 'exceleron';
+		  		font-size: 12px;
+			}
+
+			.fa {
+				margin-right: 10px;
+			}
+
+			&[aria-expanded="true"]::after {
+				content: "\e925";
+			}
+		}
+	}
+}
+
+
+
+// Styling Navigation panel strip
+.brand-logo,
+.user-acc-info,
+.navigation-links {
+	position: relative;
+	z-index: 1;
+}
+
+.navigation-panel::before {
+	content: "";
+	position: absolute;
+	background:#142b35;
+	background: linear-gradient(to left, #12232d, #10252d);
+	top: 0;
+	left: 0;
+	width: 200px;
+	min-height: 100%;
+	height: 100vh;
+
+	@media(min-width: 1600px) {
+		width: 305px;
+	}
+}
+

@@ -1,0 +1,115 @@
+.dashboard-footer {
+	position: relative;
+	background-color: #021c2a;
+	// float: left;
+	width: calc(100vw - 20px);
+	clear: both;
+	padding: 40px 0px 25px;
+	overflow-x: hidden;
+
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	width: calc(100vw - 20px);
+	// 	height: 100%;
+	// 	background: #021c2a;
+	// 	top: 0;
+	// 	box-shadow: 100px 5px 0px 5px #021c2a;
+	// 	z-index: -1;
+	// }
+
+}
+
+
+.footer-links {
+	list-style: none;
+	padding: 0;
+
+	&__item {
+		@include font($pt-sans-b, 14px);
+		margin-bottom: 25px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		a {
+			color: $white;
+		}
+	}
+}
+
+.footer-login-info {
+	list-style: none;
+	padding: 0;
+
+	&__item {
+		@include font($pt-sans-r, 12px);
+		margin-bottom: 15px;
+		color: $white; 
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		b {
+			font-weight: normal;
+			@include font($pt-sans-b);
+		}
+	}
+}
+
+.copyright-text {
+	position: relative;
+	@include font($pt-sans-r, 12px);
+	color: $ex-gray-dark;
+	text-align: center;
+	margin: 0px;
+	padding-top: 50px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		width: calc(100% - 80px);
+		transform: translate(-50%, 0px);
+		height: 1px;
+		background: $ex-navy;
+	}
+}
+
+
+.login-footer {
+	position: relative;
+	margin-top: 80px;
+	width: 240px;
+	float: right;
+}
+
+.login-footer-links {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 0px;
+	list-style: none;
+
+	&__item {
+		display: inline-block;
+		margin-right: 33px;
+		@include font($pt-sans-r, 12px);
+		color: $ex-gray-dark;
+
+		&:last-child {
+			margin-right: 0px;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+}
+
+.copyright-text-alt {
+	@include font($pt-sans-r, 12px, 18px);
+	color: $ex-gray-med;
+}

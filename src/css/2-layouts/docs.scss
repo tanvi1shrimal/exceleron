@@ -1,0 +1,142 @@
+.docs-container {
+	padding: 20px;
+}
+
+.docs-section {
+	background: $ex-gray-lighter;
+	padding: 20px;
+	margin: 20px 0px;
+
+	&__title {
+		@include font($oswald-b);
+		text-transform: uppercase;
+	}
+
+	&__sub-title {
+		@include font($pt-sans-r);
+		text-transform: uppercase;
+	}
+}
+
+.docs-card-container {
+	width: 1000px;
+	@include clearfix();
+}
+
+.docs-colors {
+	@include clearfix();
+	margin-bottom: 10px;
+
+	&__block {
+		width: 30px;
+		height: 30px;
+		float: left;
+		margin-right: 10px;
+
+		&.ex-pri-blue {
+			background: $ex-pri-blue;
+		}
+
+		&.ex-pri-red {
+			background: $ex-pri-red;
+		}
+
+		&.ex-pri-green {
+			background: $ex-pri-green;
+		}
+		&.ex-pri-dark-blue {
+			background: $ex-pri-dark-blue;
+		}
+
+		&.ex-navy {
+			background: $ex-navy;
+		}
+
+		// Secondary
+
+		&.ex-sec-yellow {
+			background: $ex-sec-yellow;
+		}
+
+		&.ex-sec-blue {
+			background: $ex-sec-blue;
+		}
+
+		&.ex-sec-green {
+			background: $ex-sec-green;
+		}
+		&.ex-sec-navy {
+			background: $ex-sec-navy;
+		}
+
+		//  Grays
+
+		&.ex-gray-darker {
+			background: $ex-gray-darker;
+		}
+		
+		&.ex-gray-moredarker {
+			background: $ex-gray-moredarker;
+		}
+
+		&.ex-gray-dark {
+			background: $ex-gray-dark;
+		}
+
+		&.ex-gray-med {
+			background: $ex-gray-med;
+		}
+
+		&.ex-gray-light {
+			background: $ex-gray-light;
+		}
+
+		&.ex-gray-lighter {
+			background: $ex-gray-lighter;
+			border: 1px solid #000;
+		}
+
+	}
+
+	&__text {
+		float: left;
+		margin-top: 5px;
+	}
+
+}
+
+
+// Col Example
+
+.col-box {
+	background: $ex-gray-light;
+	color: $ex-gray-darker;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border: 1px solid $ex-gray-lighter;
+}
+
+
+
+pre.code-snippet {
+	margin: 10px 0px 20px;
+}
+
+
+pre .close {
+	float: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	text-shadow: none;
+	filter: inherit;
+	opacity: inherit;
+}
+        
+pre .close:focus,
+pre .close:hover {
+	text-decoration: inherit;
+	cursor: inherit;
+	filter: inherit;
+	opacity: inherit;
+}

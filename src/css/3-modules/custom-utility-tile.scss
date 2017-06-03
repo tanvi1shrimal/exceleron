@@ -1,0 +1,49 @@
+.custom-utility-tile {
+	position: relative;
+	padding: 30px;
+	text-align: center;
+
+	@media(min-width: 1600px) {
+		padding: 30px 85px;
+	}
+
+	&__icon {
+		width: 45px;
+		height: 45px;
+		margin: 0 auto 25px;
+		i.ex-icon-utilitysetting {
+			font-size: 60px;
+			color: #27354d;
+			opacity: 0.5;
+		}
+	}
+
+	&__title {
+		font-family: "Oswald-Regular", sans-serif;
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+
+	&__info {
+		font-family: "PTSans-Regular", sans-serif;
+		font-size: 14px;
+	}
+
+	&__edit {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		border: 2px solid $ex-pri-blue;
+		color: $ex-pri-blue;
+		cursor: pointer;
+
+		.fa {
+			text-align: center;
+			line-height: 45px;
+			font-size: 20px;
+		}
+	}
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exceleron - Login</title>
+	<link rel="stylesheet" href="css/main.css">
+
+	<script data-main="js/config" src="js/vendor/require.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+</head>
+<body>
+
+	<div class="login-container">
+		<div class="container">
+
+
+			<div class="col-md-12">
+				<div class="login-info">
+					<div class="login-info__logo my-usage-logo">
+						<img src="images/my-usage-logo.png" alt="">
+					</div>
+					<h1 class="login-info__heading">Save your money &amp; the environment</h1>
+					<p class="text login-info__text">
+						MyUsage allows you to get information about your electricity, gas, and water consumption anytime, anywhere. It’s fast, easy, &amp; convenient.
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-8">
+				
+				<!-- <div class="login-form-wrapper"> -->
+					
+					<div class="login-form-container">
+						<form class="form login-form" data-toggle="validator" role="form">
+							<h2 class="login-form__title">Login &amp; get started!</h2>
+							<div class="form-group">
+								<label for="">E-mail Address</label>
+								<input type="email" class="form-control" required>
+								<div class="help-block with-errors"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="">Password</label>
+								<input type="password" class="form-control" required>
+								<div class="help-block with-errors"></div>
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="btn btn--blue login-form__submit">Login</button>
+							</div>
+
+							<button type="button" class="login-form__forgot-password" id="reset-password">Forgot Password</button>
+						</form>
+						<form class="form password-reset-form" data-toggle="validator" id="login-form" role="form">
+							<button type="button" class="btn btn-back" id="reset-password-back"><span class="ex-icon-arrowleft"></span></button>
+							<h2 class="login-form__title">Reset Password</h2>
+
+							<div class="form-group">
+								<label for="">Enter your email address</label>
+								<input type="email" class="form-control" required>
+								<div class="help-block with-errors"></div>
+							</div>
+
+							<div class="form-group">
+								<button type="submit" class="btn btn--blue login-form__submit">Login</button>
+							</div>
+						</form>	
+					</div>
+					
+				<!-- </div> -->
+
+			</div>
+
+		</div>
+
+
+		<div class="container">
+			<footer class="login-footer">
+				<ul class="login-footer-links">
+					<li class="login-footer-links__item"><a href="#">Terms &amp; Conditions</a></li>
+					<li class="login-footer-links__item"><a href="#">Privacy Policy</a></li>
+				</ul>
+
+				<p class="copyright-text-alt">
+					MyUsage.com &copy; 2017.
+					<br>
+					All rights reserved. v2.5.ws3
+				</p>
+			</footer>
+		</div>
+
+
+	</div>
+
+
+
+	<script>
+		require(['config'], function(){
+			require(['login']);
+		});
+	</script>
+
+
+</body>
+</html>

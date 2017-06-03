@@ -1,0 +1,127 @@
+// Common Styles
+
+.card {
+	position: relative;
+	padding: 20px;
+	background: #fff;
+	margin-bottom: 6px;
+	transition: opacity .25s ease; 
+
+	&.card-graph-expand {
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: -16px;
+			right: 40px;
+			width: 20px;
+			height: 20px;
+			transform: rotate(45deg) scale(0,0);
+			background: #fff;
+			z-index: 1;
+			box-shadow: -5px -5px 10px -5px rgba(0,0,0,0.2);
+			opacity: 0;
+			transition: all .25s ease;
+		}
+
+		&.is--opened {
+			&::after {
+				opacity: 1;
+				transform: rotate(45deg) scale(1,1);
+			}
+		}
+	}
+
+	&.is--faded {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+
+}
+
+.card-header {
+	// @include clearfix();
+}
+
+.card-title {
+	@include font($oswald-b, 14px);
+	text-transform: uppercase;
+	color: $ex-navy;
+
+	@media(min-width: 1600px) {
+		font-size: 16px;
+	}
+
+	i {
+		font-size: 18px;
+		margin-right: 5px;
+	    position: relative;
+	    vertical-align: bottom;
+
+    	@media (min-width: 1600px) {
+    		font-size: 20px;
+    		top: 2px;
+    		vertical-align: inherit;
+    	}
+	}
+	&--advanced {
+		width: 50%;
+	}
+}
+
+.card-expand {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	cursor: pointer;
+	color: $ex-gray-light;
+	transition: color .25s ease;
+	
+	&:hover {
+		color: $ex-pri-blue;
+	}
+
+	.ex-icon-expand {
+		vertical-align: top;
+	}
+
+	&--graph {
+		top: 15px;
+		right: 15px;
+		background: #fff;
+	    border-radius: 50%;
+	    width: 30px;
+	    height: 30px;
+	    text-align: center;
+	    box-shadow: 0px;
+	    transition: box-shadow .25s ease .10s,
+	    			color .25s ease 0s;
+
+	    &:hover {
+	    	box-shadow: 0 0 20px 0px rgba(0,0,0,0.15);
+			color: $ex-pri-blue;
+	    }
+
+	    .ex-icon-graph {
+	    	vertical-align: middle;
+	    	line-height: 30px;
+	    	font-size: 20px;
+	    }
+
+	}
+
+}
+
+.card.is--opened {
+	.card-expand--graph {
+		box-shadow: 0 0 20px 0px rgba(0,0,0,0.15);
+		color: $ex-pri-blue;
+	}
+}
+
+.card-body {
+
+}
+
+.card-footer {
+
+}

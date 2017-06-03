@@ -1,0 +1,16 @@
+// Override default styles here to create your more themes.
+// 
+// Include ex-dark-theme.css file after the main.css file in the <head>
+// 
+// eg.
+// add <link rel="stylesheet" href="css/ex-dark-theme.css"> to flow2_transaction-history.html file
+// -> run gulp ->
+// -> open same .html file from dist/ folder.
+// You will see that the cards have their background color overwritten.
+
+@import '../1-plugins/variables';
+@import '../1-plugins/custom';
+
+.card {
+	background: $ex-navy;
+}

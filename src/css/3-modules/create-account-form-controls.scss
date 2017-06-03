@@ -1,0 +1,149 @@
+//form controls
+
+
+.form-input {
+  	font-family: 'Oswald-Regular';
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0 13px;
+    border: 1px solid #ccc;
+    opacity: 1;
+    height: 30px;
+
+}
+.form-input1  {
+	width:195px;
+}
+.form-input2 {
+	width:52px;
+}
+.form-input3 {
+	width:165px;
+	margin-bottom:0;
+}
+.form-input4  {
+	width:210px;
+}
+.form-input5  {
+	width:180px;
+}
+.form-input6  {
+	width:87px;
+}
+.form-label {
+	font-family: 'Oswald-Regular';
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.form-input7  {
+	width:155px;
+}
+.form-input8  {
+	width:130px;
+}
+.basic-details {
+	margin-top:20px;
+	.form-group {
+		margin-right:18px;
+		float: left;
+
+		&:last-of-type{
+			margin-right:0;
+		}
+	}
+}
+
+//checkbox
+.create-account-checkbox {
+	label {
+		padding:0;
+		&:first-of-type {
+			margin-right: 3px;
+		}
+	}
+	input[type="radio"]{
+		display: none;
+	}
+	.form-input {
+		border:none;
+	}
+	input[type="radio"] + .account-check-box{
+		position: relative;
+		display: block;
+		cursor: pointer;
+		// opacity: 0.6;
+		// padding:0;
+		color:$ex-gray-light;
+		padding:8px;
+		height: 100%;
+		transition: all 0.3s ease;
+		border: 1px solid $grey;
+		border-radius:2px;
+		&::after {
+			content: "\e906";
+			font-size: 18px;
+			font-family:exceleron;
+		    color: #2dc4cb;
+		    // background:$white;
+		    opacity: 1;
+		    position:absolute;
+		    right:10px;
+		    top:50%;
+		    transform:translatey(-50%) scale(0.5);
+		    opacity: 0;
+			transition: all 0.3s ease;
+			transition-delay:0.1s; 
+		}
+	}
+	input[type="radio"]:checked + .account-check-box{
+		// opacity: 1;
+		color:$ex-gray-darker;
+		border-color: $text-pri-blue;
+		background-color: #ccedef;
+		&::after {
+			opacity: 1;
+			 transform:translatey(-50%) scale(1);
+		}
+	}
+
+	i {
+		padding-right:3px;
+		font-size: 14px;
+		vertical-align: text-top;
+	}
+}
+
+
+.form-group .create-account-checkbox label {
+	margin-bottom: 0;
+}
+
+.create-account-wraper {
+	.form-group {
+		margin-bottom:0;
+	}
+}
+.basic-details--account-info{
+	margin-bottom:20px;
+}
+
+.form-group.form-group--btm0 {
+	margin-bottom:0;
+}
+
+.create-account-wraper {
+	label {
+		font-size: 10px;
+	}
+	.form-input {
+		font-size: 9px;
+		height: 30px;
+	}
+}
+
+.form-group label{
+	color:$ex-gray-darker;
+	letter-spacing: 0.5px;
+}
